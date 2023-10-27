@@ -1,3 +1,7 @@
+package repository;
+
+import databasemodell.EmployeeService;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -18,7 +22,7 @@ public class EmployeeServiceRepository {
                 return service;
             }
         }
-        return null; // EmployeeService not found
+        return null; // databasemodell.EmployeeService not found
     }
 
     public List<EmployeeService> getAllEmployeeServices() {

@@ -1,3 +1,7 @@
+package repository;
+
+import databasemodell.Employee;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -18,7 +22,7 @@ public class EmployeeRepository {
                 return employee;
             }
         }
-        return null; // Employee not found
+        return null; // databasemodell.Employee not found
     }
 
     public List<Employee> getAllEmployees() {

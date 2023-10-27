@@ -1,3 +1,5 @@
+package databasemodell;
+
 import java.time.LocalDate;
 
 public class Employee {

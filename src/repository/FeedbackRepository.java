@@ -1,3 +1,7 @@
+package repository;
+
+import databasemodell.Feedback;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -18,7 +22,7 @@ public class FeedbackRepository {
                 return feedback;
             }
         }
-        return null; // Feedback not found
+        return null; // databasemodell.Feedback not found
     }
 
     public List<Feedback> getAllFeedbacks() {

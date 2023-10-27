@@ -1,3 +1,7 @@
+package repository;
+
+import databasemodell.Service;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -18,7 +22,7 @@ public class ServiceRepository {
                 return service;
             }
         }
-        return null; // Service not found
+        return null; // databasemodell.Service not found
     }
 
     public List<Service> getAllServices() {

@@ -1,3 +1,5 @@
+package databasemodell;
+
 public class Client {
     private int clientID;
     private String email;

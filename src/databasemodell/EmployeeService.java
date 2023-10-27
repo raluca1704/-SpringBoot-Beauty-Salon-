@@ -1,3 +1,5 @@
+package databasemodell;
+
 public class EmployeeService {
     private int jobTypID;
     private String nameService;

@@ -1,3 +1,5 @@
+package databasemodell;
+
 public class Service {
 
     private int serviceID;

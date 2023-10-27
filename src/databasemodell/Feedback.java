@@ -1,3 +1,5 @@
+package databasemodell;
+
 public class Feedback {
     private int feedbackID;
     private int clientID;

@@ -1,3 +1,5 @@
+package repository;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -18,7 +20,7 @@ public class ClientRepository {
                 return client;
             }
         }
-        return null; // Client not found
+        return null; // databasemodell.Client not found
     }
 
     public List<Client> getAllClients() {
