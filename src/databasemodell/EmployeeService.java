@@ -1,14 +1,22 @@
 package databasemodell;
 
+import java.time.LocalDate;
+
 public class EmployeeService {
-    private int jobTypID;
+
+    private String jobTypname;
     private String nameService;
-    public int getJobTypID() {
-        return jobTypID;
+    public EmployeeService(String jobTypname, String nameService) {
+        this.jobTypname = jobTypname;
+        this.nameService = nameService;
+    }
+    public String getJobTypname() {
+        return jobTypname;
     }
 
-    public void setJobTypID(int jobTypID) {
-        this.jobTypID = jobTypID;
+
+    public void setJobTypname(String jobTypname) {
+        this.jobTypname = jobTypname;
     }
 
     public String getNameService() {
@@ -19,5 +27,5 @@ public class EmployeeService {
         this.nameService = nameService;
     }
 
-
 }
+

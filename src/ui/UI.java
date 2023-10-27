@@ -1,16 +1,20 @@
 package ui;
 
+import databasemodell.Service;
+import repository.EmployeeRepository;
+import repository.ServiceRepository;
+
 import java.util.Scanner;
 
 public class UI {
 
 //    /private final repository.AppointmentRepository appointmentRepository;
-//    private final repository.EmployeeRepository employeeRepository;
+   private final repository.EmployeeRepository employeeRepository;
     private final ServiceRepository serviceRepository;
 
-    public UI( ServiceRepository serviceRepository) {
+    public UI(ServiceRepository serviceRepository, EmployeeRepository employeeRepository) {
 //        this.appointmentRepository = appointmentRepository;
-//        this.employeeRepository = employeeRepository;
+        this.employeeRepository = employeeRepository;
         this.serviceRepository = serviceRepository;
     }
     public void start() {
@@ -19,7 +23,8 @@ public class UI {
         while (working) {
             System.out.println("\nWelcome to Beauty Salon!");
             System.out.println("1. View Services");
-//            System.out.println("2. View Employees for your chosen service");
+            System.out.println("2. View Employees for your chosen service");
+         //   System.out.println("3. Choose Service ");
 //            System.out.println("3. Make an appointment");
 //            System.out.println("4. Do you have a loyalty card?");
 //            System.out.println("5. Get your receipt");
@@ -34,18 +39,34 @@ public class UI {
                 case 1:
                     viewServices();
                     break;
+                case 2:
+                    viewEmployeesForSelectedService();
+//                    break;
+//                case 3:
+//                    System.out.print("View employees for the chosen service: ");
+//
+//                    viewEmployeesForSelectedService(serviceID);
+//                    break;
 
                 default:
                     System.out.println("Invalid choice. Please try again.");
             }
         }
-        System.out.println("Thank you for shopping with us!");
+        System.out.println("Best salon in town, thanks you for choosing us!");
     }
     private void viewServices() {
+
         for (Service service : serviceRepository.getAllServices()) {
+
             System.out.println(service.getServiceID() + ": " + service.getName() + " - " + service.getPrice());
         }
     }
 
+    private void viewEmployeesForSelectedService() {
+        for (Employee employee : employeeRepository.getAllEmployees()) {
+
+            System.out.println(employee.getEmployeeID() + ": " + employee.getName() + " - " + employee.);
+        }
+    }
 
 }
