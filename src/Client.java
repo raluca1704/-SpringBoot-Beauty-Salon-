@@ -1,15 +1,15 @@
 public class Client {
-    private int id;
+    private int clientID;
     private String email;
     private String name;
     private String telephoneNumber;
 
-    public int getId() {
-        return id;
+    public int getClientID() {
+        return clientID;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setClientID(int clientID) {
+        this.clientID = clientID;
     }
 
     public String getName() {
