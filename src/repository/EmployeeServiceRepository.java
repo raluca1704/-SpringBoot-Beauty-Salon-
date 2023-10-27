@@ -16,9 +16,9 @@ public class EmployeeServiceRepository {
         employeeServices.add(employeeService);
     }
 
-    public EmployeeService getEmployeeServiceByJobType(int jobTypID) {
+    public EmployeeService getEmployeeServiceByJobType(String jobTypname) {
         for (EmployeeService service : employeeServices) {
-            if (service.getJobTypID() == jobTypID) {
+            if (service.getJobTypname() == jobTypname) {
                 return service;
             }
         }
@@ -31,14 +31,9 @@ public class EmployeeServiceRepository {
 
     public void updateEmployeeService(EmployeeService updatedEmployeeService) {
         for (int i = 0; i < employeeServices.size(); i++) {
-            if (employeeServices.get(i).getJobTypID() == updatedEmployeeService.getJobTypID()) {
+            if (employeeServices.get(i).getJobTypname() == updatedEmployeeService.getJobTypname()) {
                 employeeServices.set(i, updatedEmployeeService);
                 return;
             }
         }
-    }
-
-    public void deleteEmployeeService(int jobTypID) {
-        employeeServices.removeIf(service -> service.getJobTypID() == jobTypID);
-    }
-}
+    }}

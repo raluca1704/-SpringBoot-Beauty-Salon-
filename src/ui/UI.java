@@ -1,5 +1,6 @@
 package ui;
 
+import databasemodell.Employee;
 import databasemodell.Service;
 import repository.EmployeeRepository;
 import repository.ServiceRepository;
@@ -41,7 +42,7 @@ public class UI {
                     break;
                 case 2:
                     viewEmployeesForSelectedService();
-//                    break;
+                   break;
 //                case 3:
 //                    System.out.print("View employees for the chosen service: ");
 //
@@ -65,7 +66,7 @@ public class UI {
     private void viewEmployeesForSelectedService() {
         for (Employee employee : employeeRepository.getAllEmployees()) {
 
-            System.out.println(employee.getEmployeeID() + ": " + employee.getName() + " - " + employee.);
+            System.out.println(employee.getEmployeeID() + ": " + employee.getName() + " - " + employee.getJobTypname());
         }
     }
 

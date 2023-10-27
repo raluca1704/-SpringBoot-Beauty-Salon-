@@ -7,9 +7,12 @@ public class Employee extends EmployeeService {
     private  String name;
     private LocalDate birthDate;
 
-    public Employee(String jobTypname, String nameService,int employeeID,String name,LocalDate birthDate) {
-        super(jobTypname, nameService);
-        this
+    public Employee(String jobTypname,int employeeID,String name,LocalDate birthDate) {
+        super(jobTypname);
+        this.name=name;
+        this.birthDate=birthDate;
+        this.employeeID=employeeID;
+
     }
 
     public int getEmployeeID() {
@@ -28,13 +31,6 @@ public class Employee extends EmployeeService {
         this.name = name;
     }
 
-    public int getJobTypID() {
-        return jobTypID;
-    }
-
-    public void setJobTypID(int jobTypID) {
-        this.jobTypID = jobTypID;
-    }
 
     public LocalDate getBirthDate() {
         return birthDate;

@@ -3,7 +3,7 @@ package databasemodell;
 public class Service {
 
     private int serviceID;
-    private int jobTypID;
+    private String jobTypname;
     private String name;
     private float price;
 
@@ -16,12 +16,12 @@ public class Service {
     }
 
 
-    public int getJobTypID() {
-        return jobTypID;
+    public String getJobTypname() {
+        return jobTypname;
     }
 
-    public void setJobTypID(int jobTypID) {
-        this.jobTypID = jobTypID;
+    public void setJobTypname(String jobTypname) {
+        this.jobTypname = jobTypname;
     }
 
     public float getPrice() {

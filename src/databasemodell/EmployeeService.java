@@ -5,10 +5,10 @@ import java.time.LocalDate;
 public class EmployeeService {
 
     private String jobTypname;
-    private String nameService;
-    public EmployeeService(String jobTypname, String nameService) {
+
+    public EmployeeService(String jobTypname) {
         this.jobTypname = jobTypname;
-        this.nameService = nameService;
+
     }
     public String getJobTypname() {
         return jobTypname;
@@ -17,14 +17,6 @@ public class EmployeeService {
 
     public void setJobTypname(String jobTypname) {
         this.jobTypname = jobTypname;
-    }
-
-    public String getNameService() {
-        return nameService;
-    }
-
-    public void setNameService(String nameService) {
-        this.nameService = nameService;
     }
 
 }
