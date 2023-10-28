@@ -4,20 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a569ba57-d531-498c-b278-8422563d28cd" name="Changes" comment="mostenire employee">
+    <list default="true" id="a569ba57-d531-498c-b278-8422563d28cd" name="Changes" comment="ui-afisare employee">
+      <change afterPath="$PROJECT_DIR$/src/controller/ServiceController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/databasemodell/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/databasemodell/Employee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/databasemodell/EmployeeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/databasemodell/EmployeeService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/databasemodell/Service.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/databasemodell/Service.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/repository/EmployeeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/repository/EmployeeRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/repository/EmployeeServiceRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/repository/EmployeeServiceRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ui/UI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/UI.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -53,7 +56,7 @@
       <option name="presentableId" value="Default" />
       <updated>1698422131155</updated>
       <workItem from="1698422133894" duration="298000" />
-      <workItem from="1698422489932" duration="6844000" />
+      <workItem from="1698422489932" duration="8782000" />
     </task>
     <task id="LOCAL-00001" summary="mostenire employee">
       <option name="closed" value="true" />
@@ -63,7 +66,15 @@
       <option name="project" value="LOCAL" />
       <updated>1698427281522</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="ui-afisare employee">
+      <option name="closed" value="true" />
+      <created>1698429596324</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1698429596324</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -71,6 +82,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="mostenire employee" />
-    <option name="LAST_COMMIT_MESSAGE" value="mostenire employee" />
+    <MESSAGE value="ui-afisare employee" />
+    <option name="LAST_COMMIT_MESSAGE" value="ui-afisare employee" />
   </component>
 </project>
