@@ -6,29 +6,28 @@ import repository.ServiceRepository;
 import java.util.List;
 
 public class ServiceController {
-    private ServiceRepository serviceController;
-
-    public ServiceController() {
-        this.serviceController = new ServiceRepository();
+    private ServiceRepository serviceRepository;
+    public ServiceController(ServiceRepository serviceRepository) {
+        this. serviceRepository = serviceRepository;
     }
 
     public void addService(Service service) {
-        serviceController.addService(service);
+        serviceRepository.addService(service);
     }
 
     public Service getServiceById(int serviceID) {
-        return serviceController.getServiceById(serviceID);
+        return serviceRepository.getServiceById(serviceID);
     }
 
     public List<Service> getAllServices() {
-        return serviceController.getAllServices();
+        return serviceRepository.getAllServices();
     }
 
     public void updateService(Service updatedService) {
-        serviceController.updateService(updatedService);
+        serviceRepository.updateService(updatedService);
     }
 
     public void deleteService(int serviceID) {
-        serviceController.deleteService(serviceID);
+        serviceRepository.deleteService(serviceID);
     }
 }

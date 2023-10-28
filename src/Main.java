@@ -1,7 +1,9 @@
+import controller.EmployeeController;
 import databasemodell.Employee;
-import databasemodell.EmployeeService;
 import databasemodell.Service;
 import controller.ServiceController;
+import repository.EmployeeRepository;
+import repository.ServiceRepository;
 import ui.UI;
 
 import java.time.LocalDate;
@@ -10,7 +12,11 @@ public class Main {
     public static void main(String[] args) {
 //        repository.AppointmentRepository appointmentRepository = new repository.AppointmentRepository();
       //repository.EmployeeRepository employeeRepository = new repository.EmployeeRepository();
-        ServiceController serviceController = new ServiceController();
+        ServiceRepository serviceRepository = new ServiceRepository();
+        ServiceController serviceController = new ServiceController(serviceRepository);
+
+        EmployeeRepository employeeRepository=new EmployeeRepository();
+        EmployeeController employeeController= new EmployeeController(employeeRepository);
 
         Service service1 = new Service();
         service1.setServiceID(1);
@@ -46,13 +52,13 @@ public class Main {
         Employee employee3 = new Employee("Esthetician", 1003, "David Lee", LocalDate.of(1982, 8, 20));
         Employee employee4 = new Employee("Makeup Artist", 1004, "Emily Davis", LocalDate.of(1995, 3, 25));
         Employee employee5 = new Employee("Hairstylist", 1005, "Johanna Smith", LocalDate.of(1985, 4, 17));
-//        employeeRepository.addEmployee(employee1);
-//        employeeRepository.addEmployee(employee2);
-//        employeeRepository.addEmployee(employee3);
-//        employeeRepository.addEmployee(employee4);
-//        employeeRepository.addEmployee(employee5);
+        employeeController.addEmployee(employee1);
+        employeeController.addEmployee(employee2);
+        employeeController.addEmployee(employee3);
+        employeeController.addEmployee(employee4);
+        employeeController.addEmployee(employee5);
         // Create the ui.UI
-        UI ui = new UI(serviceController);
+        UI ui = new UI(serviceController, employeeController);
 
         // Start the ui.UI
         ui.start();

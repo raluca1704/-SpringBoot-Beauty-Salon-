@@ -4,10 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a569ba57-d531-498c-b278-8422563d28cd" name="Changes" comment="ui-afisare employee">
-      <change afterPath="$PROJECT_DIR$/src/controller/ServiceController.java" afterDir="false" />
+    <list default="true" id="a569ba57-d531-498c-b278-8422563d28cd" name="Changes" comment="controllere">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/controller/AppointmentController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/controller/ClientController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/controller/EmployeeServiceController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/controller/FeedbackController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/EmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/EmployeeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/ServiceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/ServiceController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ui/UI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/UI.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -38,6 +44,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "master",
     "node.js.detected.package.eslint": "true",
@@ -56,7 +63,7 @@
       <option name="presentableId" value="Default" />
       <updated>1698422131155</updated>
       <workItem from="1698422133894" duration="298000" />
-      <workItem from="1698422489932" duration="8782000" />
+      <workItem from="1698422489932" duration="11878000" />
     </task>
     <task id="LOCAL-00001" summary="mostenire employee">
       <option name="closed" value="true" />
@@ -74,7 +81,15 @@
       <option name="project" value="LOCAL" />
       <updated>1698429596324</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="controllere">
+      <option name="closed" value="true" />
+      <created>1698506543260</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1698506543260</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -83,6 +98,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="mostenire employee" />
     <MESSAGE value="ui-afisare employee" />
-    <option name="LAST_COMMIT_MESSAGE" value="ui-afisare employee" />
+    <MESSAGE value="controllere" />
+    <option name="LAST_COMMIT_MESSAGE" value="controllere" />
   </component>
 </project>
