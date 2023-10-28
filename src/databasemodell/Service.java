@@ -24,7 +24,7 @@ public class Service {
         this.jobTypname = jobTypname;
     }
 
-    public float getPrice() {
+    public  float getPrice() {
         return price;
     }
 

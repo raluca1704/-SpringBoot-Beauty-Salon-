@@ -3,6 +3,7 @@ package controller;
 import databasemodell.Service;
 import repository.ServiceRepository;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class ServiceController {
@@ -29,5 +30,12 @@ public class ServiceController {
 
     public void deleteService(int serviceID) {
         serviceRepository.deleteService(serviceID);
+    }
+    public List<Service> getServicesByName(String name) {
+        return serviceRepository.getServicesByName(name);
+
+    }
+    public float getServicePriceById(int serviceID) {
+        return serviceRepository.getServicePriceById(serviceID);
     }
 }

@@ -7,6 +7,8 @@ import databasemodell.Employee;
 import databasemodell.EmployeeService;
 import databasemodell.Service;
 
+import java.util.List;
+import java.util.Optional;
 import java.util.Scanner;
 
 public class UI {
@@ -23,10 +25,10 @@ public class UI {
         boolean working = true;
         while (working) {
             System.out.println("\nWelcome to Beauty Salon!");
-            System.out.println("1. View Services");
-            System.out.println("2. View Employees for your chosen service");
-//          System.out.println("3. Make an appointment");
-            System.out.println("4. Do you have a loyalty card?");
+            System.out.println("1. View our services");
+            System.out.println("2. View our employees");
+            System.out.println("3. Make an appointment");
+//          System.out.println("4. Do you have a loyalty card?");
 //          System.out.println("5. Get your receipt");
 //          System.out.println("6. Please, give us a feedback");
 //          System.out.println("7. Exit");
@@ -42,11 +44,15 @@ public class UI {
                 case 2:
                     viewEmployeesForSelectedService();
                    break;
-//                case 3:
-//                    System.out.print("View employees for the chosen service: ");
-//
-//                    viewEmployeesForSelectedService(serviceID);
-//                    break;
+                case 3:
+                    Scanner scaner = new Scanner(System.in);
+                    System.out.print("First you need to choose a service: ");
+                    String name = scaner.nextLine();
+                    chooseService(name);
+                    Scanner scanner1 = new Scanner(System.in);
+                    System.out.print("Now, which of our employees would you like to choose? ");
+                    String nameemployee = scanner1.nextLine();
+                    break;
 
                 default:
                     System.out.println("Invalid choice. Please try again.");
@@ -65,8 +71,23 @@ public class UI {
     private void viewEmployeesForSelectedService() {
         for (Employee employee : employeeController.getAllEmployees()) {
 
-            System.out.println(employee.getName() + " - " + employee.getJobTypname());
+            System.out.println(employee.getName() + " - " + employee.getJobTypname()+ " - Rating: "+ employee.getRating());
         }
     }
+    private void chooseService(String name) {
+
+        List<Service> serviceChoosed = serviceController.getServicesByName(name);
+        int id= 0;
+        for(Service service:serviceChoosed){
+            id=service.getServiceID();
+        }
+        if (serviceChoosed.isEmpty()) {
+            System.out.println("No services found with the name: " + name);
+        } else {
+            System.out.println("The original price for '" + name + "' is: " + serviceController.getServicePriceById(id)+ ", but it may differ by the job difficulty or the employee." );
+
+        }
+    }
+
 
 }

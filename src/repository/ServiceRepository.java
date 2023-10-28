@@ -26,6 +26,7 @@ public class ServiceRepository {
         return null; // databasemodell.Service not found
     }
 
+
     public List<Service> getAllServices() {
         return new ArrayList<>(services); // Return a copy to avoid modifying the internal list
     }
@@ -42,4 +43,25 @@ public class ServiceRepository {
     public void deleteService(int serviceID) {
         services.removeIf(service -> service.getServiceID() == serviceID);
     }
+    public List<Service> getServicesByName(String name) {
+        List<Service> matchingServices = new ArrayList<>();
+
+        for (Service service : services) {
+            if (service.getName().equalsIgnoreCase(name)) {
+                matchingServices.add(service);
+            }
+        }
+
+        return matchingServices;
+    }
+    public float getServicePriceById(int serviceID) {
+        for (Service service : services) {
+            if (service.getServiceID() == serviceID) {
+                return service.getPrice();
+            }
+        }
+        return -1.0f; // You can choose an appropriate default value or handle the "not found" case as needed
+    }
+
+
 }
