@@ -1,22 +1,27 @@
+import controller.AppointmentController;
 import controller.EmployeeController;
+import databasemodell.Appointment;
 import databasemodell.Employee;
 import databasemodell.Service;
 import controller.ServiceController;
+import repository.AppointmentRepository;
 import repository.EmployeeRepository;
 import repository.ServiceRepository;
 import ui.UI;
 
 import java.time.LocalDate;
+import java.time.LocalTime;
 
 public class Main {
     public static void main(String[] args) {
-//        repository.AppointmentRepository appointmentRepository = new repository.AppointmentRepository();
-      //repository.EmployeeRepository employeeRepository = new repository.EmployeeRepository();
         ServiceRepository serviceRepository = new ServiceRepository();
         ServiceController serviceController = new ServiceController(serviceRepository);
 
         EmployeeRepository employeeRepository=new EmployeeRepository();
         EmployeeController employeeController= new EmployeeController(employeeRepository);
+
+//        AppointmentRepository appointmentRepository=new AppointmentRepository();
+//        AppointmentController appointmentController= new AppointmentController(appointmentRepository);
 
         Service service1 = new Service();
         service1.setServiceID(1);
@@ -154,14 +159,14 @@ public class Main {
 
 
 
-        Employee employee1 = new Employee("Hairstylist", 1001, "John Smith", LocalDate.of(1985, 4, 10), "9.81");
-        Employee employee2 = new Employee("Hairstylist", 1002, "Alice Johnson", LocalDate.of(1990, 5, 15),"8.90");
-        Employee employee3 = new Employee("Nail Technician", 1003, "David Lee", LocalDate.of(1982, 8, 20),"10");
-        Employee employee4 = new Employee("Nail Technician", 1004, "Emily Davis", LocalDate.of(1995, 3, 25),"9.56");
-        Employee employee5 = new Employee("Makeup Artist", 1005, "Johanna Smith", LocalDate.of(1985, 4, 17),"9.70");
-        Employee employee6 = new Employee("Makeup Artist", 1006, "Marry Jhons", LocalDate.of(1999, 6, 20),"8.70");
-        Employee employee7 = new Employee("Cosmetician", 1007, "Clara Claris", LocalDate.of(1993, 5, 3),"8.40");
-        Employee employee8 = new Employee("Cosmetician", 1007, "Elen Rules", LocalDate.of(1995, 1, 2),"9.83");
+        Employee employee1 = new Employee("Hairstylist", 1001, "John Smith", LocalDate.of(1985, 4, 10), "9.81", LocalTime.of(9, 0),LocalTime.of(16, 0));
+        Employee employee2 = new Employee("Hairstylist", 1002, "Alice Johnson", LocalDate.of(1990, 5, 15),"8.90", LocalTime.of(16, 0),LocalTime.of(20, 0));
+        Employee employee3 = new Employee("Nail Technician", 1003, "David Lee", LocalDate.of(1982, 8, 20),"10", LocalTime.of(8, 0),LocalTime.of(14, 0));
+        Employee employee4 = new Employee("Nail Technician", 1004, "Emily Davis", LocalDate.of(1995, 3, 25),"9.56", LocalTime.of(14, 0),LocalTime.of(18, 0));
+        Employee employee5 = new Employee("Makeup Artist", 1005, "Johanna Smith", LocalDate.of(1985, 4, 17),"9.70", LocalTime.of(7, 0),LocalTime.of(12, 0));
+        Employee employee6 = new Employee("Makeup Artist", 1006, "Marry Jhons", LocalDate.of(1999, 6, 20),"8.70", LocalTime.of(13, 30),LocalTime.of(20, 30));
+        Employee employee7 = new Employee("Cosmetician", 1007, "Clara Claris", LocalDate.of(1993, 5, 3),"8.40", LocalTime.of(9, 0),LocalTime.of(16, 0));
+        Employee employee8 = new Employee("Cosmetician", 1008, "Elen Rules", LocalDate.of(1995, 1, 2),"9.83", LocalTime.of(10, 0),LocalTime.of(15, 0));
 
 
 

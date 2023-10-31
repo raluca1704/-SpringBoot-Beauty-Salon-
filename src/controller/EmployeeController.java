@@ -3,6 +3,7 @@ package controller;
 import databasemodell.Employee;
 import repository.EmployeeRepository;
 
+import java.time.LocalTime;
 import java.util.List;
 
 public class EmployeeController {
@@ -13,6 +14,7 @@ public class EmployeeController {
 
     public void addEmployee(Employee employee) {
         employeeRepository.addEmployee(employee);
+
     }
 
     public Employee getEmployeeById(int employeeID) {
@@ -30,4 +32,16 @@ public class EmployeeController {
     public void deleteEmployee(int employeeID) {
         employeeRepository.deleteEmployee(employeeID);
     }
+    public List<Employee> getEmployeesByName(String name) {
+        return employeeRepository.getEmployeesByName(name);
+    }
+
+    public LocalTime getWorkStartTimeById(int employeeID) {
+        return employeeRepository.getWorkStartTimeById(employeeID);
+    }
+
+    public LocalTime getWorkEndTimeById(int employeeID) {
+        return employeeRepository.getWorkEndTimeById(employeeID);
+    }
+
 }

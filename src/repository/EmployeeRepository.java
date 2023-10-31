@@ -2,6 +2,7 @@ package repository;
 
 import databasemodell.Employee;
 
+import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -41,5 +42,31 @@ public class EmployeeRepository {
     public void deleteEmployee(int employeeID) {
         employees.removeIf(employee -> employee.getEmployeeID() == employeeID);
     }
+    public List<Employee> getEmployeesByName(String name) {
+        List<Employee> matchingEmployees = new ArrayList<>();
 
+        for (Employee employee : employees) {
+            if (employee.getName().equalsIgnoreCase(name)) {
+                matchingEmployees.add(employee);
+            }
+        }
+
+        return matchingEmployees;
+    }
+    public LocalTime getWorkStartTimeById(int employeeID) {
+        for (Employee employee : employees) {
+            if (employee.getEmployeeID() == employeeID) {
+                return employee.getWorkStartTime();
+            }
+        }
+        return null; // Employee not found
+    }
+    public LocalTime getWorkEndTimeById(int employeeID) {
+        for (Employee employee : employees) {
+            if (employee.getEmployeeID() == employeeID) {
+                return employee.getWorkEndTime();
+            }
+        }
+        return null; // Employee not found
+    }
 }
