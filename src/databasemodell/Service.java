@@ -1,11 +1,15 @@
 package databasemodell;
 
+import java.util.List;
+
 public class Service {
 
     private int serviceID;
-    private String jobTypname;
+
     private String name;
     private float price;
+
+
 
     public String getName() {
         return name;
@@ -15,14 +19,6 @@ public class Service {
         this.name = name;
     }
 
-
-    public String getJobTypname() {
-        return jobTypname;
-    }
-
-    public void setJobTypname(String jobTypname) {
-        this.jobTypname = jobTypname;
-    }
 
     public  float getPrice() {
         return price;

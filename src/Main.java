@@ -1,12 +1,9 @@
-import controller.AppointmentController;
-import controller.EmployeeController;
+import controller.*;
 import databasemodell.Appointment;
+import databasemodell.Client;
 import databasemodell.Employee;
 import databasemodell.Service;
-import controller.ServiceController;
-import repository.AppointmentRepository;
-import repository.EmployeeRepository;
-import repository.ServiceRepository;
+import repository.*;
 import ui.UI;
 
 import java.time.LocalDate;
@@ -16,46 +13,47 @@ public class Main {
     public static void main(String[] args) {
         ServiceRepository serviceRepository = new ServiceRepository();
         ServiceController serviceController = new ServiceController(serviceRepository);
+        LoyaltyCardRepository loyaltyCardRepository= new LoyaltyCardRepository();
+        LoyaltyCardController loyaltyCardController= new LoyaltyCardController(loyaltyCardRepository);
+     ClientRepository clientRepository= new ClientRepository();
+     ClientController clientController= new ClientController(clientRepository);
 
-        EmployeeRepository employeeRepository=new EmployeeRepository();
+     EmployeeRepository employeeRepository=new EmployeeRepository();
         EmployeeController employeeController= new EmployeeController(employeeRepository);
 
-//        AppointmentRepository appointmentRepository=new AppointmentRepository();
-//        AppointmentController appointmentController= new AppointmentController(appointmentRepository);
+        AppointmentRepository appointmentRepository=new AppointmentRepository();
+       AppointmentController appointmentController= new AppointmentController(appointmentRepository);
 
         Service service1 = new Service();
+
         service1.setServiceID(1);
-        service1.setName("Woman haircut");
+        service1.setName("Hairstyling");
         service1.setPrice(200);
-        service1.setJobTypname("Hairstylist");
         serviceController.addService(service1);
 
         Service service2 = new Service();
         service2.setServiceID(2);
-        service2.setName("Man haircut");
+        service2.setName("Haircoloring");
         service2.setPrice(70);
-        service2.setJobTypname("Hairstylist");
+
         serviceController.addService(service2);
 
         Service service3 = new Service();
+
         service3.setServiceID(3);
-        service3.setName("Hair coloring");
+        service3.setName("Haircutting");
         service3.setPrice(150);
-        service3.setJobTypname("Hairstylist");
+
         serviceController.addService(service3);
 
-        Service service4 = new Service();
-        service4.setServiceID(4);
-        service4.setName("Hair styling");
-        service4.setPrice(100);
-        service4.setJobTypname("Hairstylist");
-        serviceController.addService(service4);
+
 
         Service service5 = new Service();
+
         service5.setServiceID(5);
         service5.setName("Semipemanent Manicure");
         service5.setPrice(100);
-        service5.setJobTypname("Nail Technician");
+
         serviceController.addService(service5);
 
 
@@ -63,110 +61,178 @@ public class Main {
         service6.setServiceID(6);
         service6.setName("Bridal Makeup");
         service6.setPrice(300);
-        service6.setJobTypname("Makeup Artist");
+
         serviceController.addService(service6);
 
         Service service7 = new Service();
-        service7.setServiceID(7);
+
+        service7.setServiceID(6);
         service7.setName("Evening Makeup");
         service7.setPrice(150);
-        service7.setJobTypname("Makeup Artist");
+
         serviceController.addService(service7);
 
         Service service8 = new Service();
-        service8.setServiceID(8);
+
+        service8.setServiceID(7);
         service8.setName("Fashion Makeup");
         service8.setPrice(250);
-        service8.setJobTypname("Makeup Artist");
+
         serviceController.addService(service8);
 
         Service service9 = new Service();
-        service9.setServiceID(9);
+
+        service9.setServiceID(8);
         service9.setName("Theatrical Makeup");
         service9.setPrice(200);
-        service9.setJobTypname("Makeup Artist");
+
         serviceController.addService(service9);
 
         Service service10 = new Service();
-        service10.setServiceID(10);
+        service10.setServiceID(9);
         service10.setName("Special Effects Makeup");
         service10.setPrice(350);
-        service10.setJobTypname("Makeup Artist");
+
         serviceController.addService(service10);
 
         Service service16 = new Service();
-        service16.setServiceID(16);
+
+        service7.setServiceID(10);
         service16.setName("Facial Treatment");
         service16.setPrice(150);
-        service16.setJobTypname("Cosmetician");
+
         serviceController.addService(service16);
 
         Service service17 = new Service();
-        service17.setServiceID(17);
+
+        service17.setServiceID(11);
         service17.setName("Eyebrow Styling");
         service17.setPrice(50);
-        service17.setJobTypname("Cosmetician");
+
         serviceController.addService(service17);
 
         Service service18 = new Service();
-        service18.setServiceID(18);
+        service18.setServiceID(12);
         service18.setName("Skin Cleansing");
         service18.setPrice(120);
-        service18.setJobTypname("Cosmetician");
+
         serviceController.addService(service18);
 
         Service service19 = new Service();
-        service19.setServiceID(19);
+        service19.setServiceID(13);
         service19.setName("Anti-Aging Treatment");
         service19.setPrice(200);
-        service19.setJobTypname("Cosmetician");
+
         serviceController.addService(service19);
         Service service11 = new Service();
-        service11.setServiceID(11);
+        service11.setServiceID(14);
         service11.setName("Semipemanent Pedicure");
         service11.setPrice(100);
-        service11.setJobTypname("Nail Technician");
+
         serviceController.addService(service11);
 
         Service service12 = new Service();
-        service12.setServiceID(12);
+        service12.setServiceID(15);
         service12.setName("Manicure contruction");
         service12.setPrice(180);
-        service12.setJobTypname("Nail Technician");
+
         serviceController.addService(service12);
 
         Service service13 = new Service();
-        service13.setServiceID(13);
+
+        service13.setServiceID(16);
         service13.setName("Pedicure contruction");
         service13.setPrice(180);
-        service13.setJobTypname("Nail Technician");
+
         serviceController.addService(service13);
 
         Service service14 = new Service();
-        service14.setServiceID(14);
+        service14.setServiceID(17);
         service14.setName("Manicure maintenance");
         service14.setPrice(100);
-        service14.setJobTypname("Nail Technician");
+
         serviceController.addService(service14);
 
         Service service15 = new Service();
-        service15.setServiceID(15);
+        service15.setServiceID(18);
         service15.setName("Pedicure maintenance");
         service15.setPrice(100);
-        service15.setJobTypname("Nail Technician");
         serviceController.addService(service15);
 
 
+        Employee employee1 = new Employee();
+        employee1.setServiceID(1);
+        employee1.setEmployeeID(1001);
+        employee1.setName("John Smith");
+        employee1.setBirthDate(LocalDate.of(1985, 4, 10));
+        employee1.setRating("9.81");
+        employee1.setWorkStartTime(LocalTime.of(9, 0));
+        employee1.setWorkEndTime(LocalTime.of(16, 0));
 
+        Employee employee2 = new Employee();
+        employee2.setServiceID(2);
+        employee2.setEmployeeID(1002);
+        employee2.setName("Alice Johnson");
+        employee2.setBirthDate(LocalDate.of(1990, 5, 15));
+        employee2.setRating("8.90");
+        employee2.setWorkStartTime(LocalTime.of(16, 0));
+        employee2.setWorkEndTime(LocalTime.of(20, 0));
 
-        Employee employee1 = new Employee("Hairstylist", 1001, "John Smith", LocalDate.of(1985, 4, 10), "9.81", LocalTime.of(9, 0),LocalTime.of(16, 0));
-        Employee employee2 = new Employee("Hairstylist", 1002, "Alice Johnson", LocalDate.of(1990, 5, 15),"8.90", LocalTime.of(16, 0),LocalTime.of(20, 0));
-        Employee employee3 = new Employee("Nail Technician", 1003, "David Lee", LocalDate.of(1982, 8, 20),"10", LocalTime.of(8, 0),LocalTime.of(14, 0));
-        Employee employee4 = new Employee("Nail Technician", 1004, "Emily Davis", LocalDate.of(1995, 3, 25),"9.56", LocalTime.of(14, 0),LocalTime.of(18, 0));
-        Employee employee5 = new Employee("Makeup Artist", 1005, "Johanna Smith", LocalDate.of(1985, 4, 17),"9.70", LocalTime.of(7, 0),LocalTime.of(12, 0));
-        Employee employee6 = new Employee("Makeup Artist", 1006, "Marry Jhons", LocalDate.of(1999, 6, 20),"8.70", LocalTime.of(13, 30),LocalTime.of(20, 30));
-        Employee employee7 = new Employee("Cosmetician", 1007, "Clara Claris", LocalDate.of(1993, 5, 3),"8.40", LocalTime.of(9, 0),LocalTime.of(16, 0));
-        Employee employee8 = new Employee("Cosmetician", 1008, "Elen Rules", LocalDate.of(1995, 1, 2),"9.83", LocalTime.of(10, 0),LocalTime.of(15, 0));
+        Employee employee3 = new Employee();
+        employee3.setServiceID(3);
+        employee3.setEmployeeID(1003);
+        employee3.setName("David Lee");
+        employee3.setBirthDate(LocalDate.of(1982, 8, 20));
+        employee3.setRating("10");
+        employee3.setWorkStartTime(LocalTime.of(8, 0));
+        employee3.setWorkEndTime(LocalTime.of(14, 0));
+
+        Employee employee4 = new Employee();
+
+        employee4.setServiceID(4);
+        employee4.setEmployeeID(1004);
+        employee4.setName("Emily Davis");
+        employee4.setBirthDate(LocalDate.of(1995, 3, 25));
+        employee4.setRating("9.56");
+        employee4.setWorkStartTime(LocalTime.of(14, 0));
+        employee4.setWorkEndTime(LocalTime.of(18, 0));
+
+        Employee employee5 = new Employee();
+        employee5.setServiceID(5);
+        employee5.setEmployeeID(1005);
+        employee5.setName("Johanna Smith");
+        employee5.setBirthDate(LocalDate.of(1985, 4, 17));
+        employee5.setRating("9.70");
+        employee5.setWorkStartTime(LocalTime.of(7, 0));
+        employee5.setWorkEndTime(LocalTime.of(12, 0));
+
+        Employee employee6 = new Employee();
+        employee6.setServiceID(6);
+        employee6.setEmployeeID(1006);
+        employee6.setName("Marry Jhons");
+        employee6.setBirthDate(LocalDate.of(1999, 6, 20));
+        employee6.setRating("8.70");
+        employee6.setWorkStartTime(LocalTime.of(13, 30));
+        employee6.setWorkEndTime(LocalTime.of(20, 30));
+
+        Employee employee7 = new Employee();
+
+        employee7.setServiceID(7);
+        employee7.setEmployeeID(1007);
+        employee7.setName("Clara Claris");
+        employee7.setBirthDate(LocalDate.of(1993, 5, 3));
+        employee7.setRating("8.40");
+        employee7.setWorkStartTime(LocalTime.of(9, 0));
+        employee7.setWorkEndTime(LocalTime.of(16, 0));
+
+        Employee employee8 = new Employee();
+        employee8.setServiceID(8);
+        employee8.setEmployeeID(1008);
+        employee8.setName("Elen Rules");
+        employee8.setBirthDate(LocalDate.of(1995, 1, 2));
+        employee8.setRating("9.83");
+        employee8.setWorkStartTime(LocalTime.of(10, 0));
+        employee8.setWorkEndTime(LocalTime.of(15, 0));
 
 
 
@@ -180,7 +246,7 @@ public class Main {
         employeeController.addEmployee(employee8);
 
         // Create the ui.UI
-        UI ui = new UI(serviceController, employeeController);
+        UI ui = new UI(clientController, loyaltyCardController, serviceController, employeeController, appointmentController);
 
         // Start the ui.UI
         ui.start();

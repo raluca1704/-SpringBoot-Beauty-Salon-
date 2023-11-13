@@ -4,7 +4,7 @@ public class LoyaltyCard {
     private int loyaltyCardID;
     private int clientID;
     private float discount;
-    private int bonusPunkt;
+
     public int getClientID() {
         return clientID;
     }
@@ -21,13 +21,7 @@ public class LoyaltyCard {
         this.discount = discount;
     }
 
-    public int getBonusPunkt() {
-        return bonusPunkt;
-    }
 
-    public void setBonusPunkt(int bonusPunkt) {
-        this.bonusPunkt = bonusPunkt;
-    }
 
     public int getLoyaltyCardID() {
         return loyaltyCardID;

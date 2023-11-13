@@ -25,5 +25,10 @@ public class LoyaltyCardController {
 
     public void updateLoyaltyCard(LoyaltyCard updatedLoyaltyCard) {
         loyaltyCardRepository.updateLoyaltyCard(updatedLoyaltyCard);
+
     }
+    public LoyaltyCard getLoyaltyCardByClientID(int clientID) {
+        return loyaltyCardRepository.getLoyaltyCardByClientID(clientID);
+    }
+
 }

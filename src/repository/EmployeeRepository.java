@@ -9,6 +9,7 @@ import java.util.List;
 public class EmployeeRepository {
     private List<Employee> employees;
 
+
     public EmployeeRepository() {
         this.employees = new ArrayList<>();
     }
@@ -69,4 +70,17 @@ public class EmployeeRepository {
         }
         return null; // Employee not found
     }
+    public String getServiceNameById(int employeeID) {
+        for (Employee employee : employees) {
+            if (employee.getEmployeeID() == employeeID) {
+                int serviceID = employee.getServiceID();
+                // Assuming you have a service repository to get the service name by ID
+                ServiceRepository serviceRepository = null;
+                String serviceName = serviceRepository.getServiceById(serviceID).getName();
+                return serviceName;
+            }
+        }
+        return null; // Employee not found or associated service not found
+    }
+
 }

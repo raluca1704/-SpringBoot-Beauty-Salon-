@@ -35,5 +35,13 @@ public class LoyaltyCardRepository {
             }
         }
     }
+    public LoyaltyCard getLoyaltyCardByClientID(int clientID) {
+        for (LoyaltyCard loyaltyCard : loyaltyCards) {
+            if (loyaltyCard.getClientID() == clientID) {
+                return loyaltyCard;
+            }
+        }
+        return null; // LoyaltyCard not found
+    }
 
 }

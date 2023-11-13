@@ -41,4 +41,13 @@ public class ClientRepository {
     public void deleteClient(int clientID) {
         clients.removeIf(client -> client.getClientID() == clientID);
     }
+    public Client getClientByName(String name) {
+        for (Client client : clients) {
+            if (client.getName().equalsIgnoreCase(name)) {
+                return client;
+            }
+        }
+        return null; // Client not found
+    }
 }
+

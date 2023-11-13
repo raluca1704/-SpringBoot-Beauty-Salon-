@@ -31,4 +31,8 @@ public class ClientController {
     public void deleteClient(int clientID) {
         clientRepository.deleteClient(clientID);
     }
+    public Client getClientByName(String name) {
+        return clientRepository.getClientByName(name);
+    }
+
 }

@@ -3,12 +3,31 @@ package databasemodell;
 import java.time.LocalDate;
 import java.time.LocalTime;
 
-public class Employee extends EmployeeService {
+public class Employee{
     private int employeeID;
     private  String name;
     private LocalDate birthDate;
     private LocalTime workStartTime;
     private  LocalTime workEndTime;
+    private int serviceID;
+
+    public int getServiceID() {
+        return serviceID;
+    }
+
+    public void setWorkStartTime(LocalTime workStartTime) {
+        this.workStartTime = workStartTime;
+    }
+
+    public void setWorkEndTime(LocalTime workEndTime) {
+        this.workEndTime = workEndTime;
+    }
+
+    public void setServiceID(int serviceID) {
+        this.serviceID = serviceID;
+    }
+
+
 
 
     private String rating;
@@ -21,17 +40,7 @@ public class Employee extends EmployeeService {
         return workEndTime;
     }
 
-    public Employee(String jobTypname,int employeeID,String name,LocalDate birthDate, String rating, LocalTime workStartTime, LocalTime workEndTime) {
-        super(jobTypname);
-        this.rating=rating;
-        this.name=name;
-        this.birthDate=birthDate;
-        this.employeeID=employeeID;
-        this.workStartTime = workStartTime;
-        this.workEndTime = workEndTime;
 
-
-    }
 
     public int getEmployeeID() {
         return employeeID;

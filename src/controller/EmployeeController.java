@@ -2,12 +2,14 @@ package controller;
 
 import databasemodell.Employee;
 import repository.EmployeeRepository;
+import repository.ServiceRepository;
 
 import java.time.LocalTime;
 import java.util.List;
 
 public class EmployeeController {
     private EmployeeRepository employeeRepository;
+
     public EmployeeController(EmployeeRepository employeeRepository) {
         this.employeeRepository = employeeRepository;
     }
@@ -32,6 +34,7 @@ public class EmployeeController {
     public void deleteEmployee(int employeeID) {
         employeeRepository.deleteEmployee(employeeID);
     }
+
     public List<Employee> getEmployeesByName(String name) {
         return employeeRepository.getEmployeesByName(name);
     }
@@ -43,5 +46,7 @@ public class EmployeeController {
     public LocalTime getWorkEndTimeById(int employeeID) {
         return employeeRepository.getWorkEndTimeById(employeeID);
     }
+
+
 
 }

@@ -1,5 +1,6 @@
 package repository;
 
+import databasemodell.Employee;
 import databasemodell.Service;
 
 import java.util.ArrayList;
@@ -62,6 +63,19 @@ public class ServiceRepository {
         }
         return -1.0f; // You can choose an appropriate default value or handle the "not found" case as needed
     }
+
+    public String getServiceNameById(int serviceID) {
+        Service service = getServiceById(serviceID);
+
+        if (service != null) {
+            return service.getName();
+        }
+
+        return null; // Service not found
+    }
+
+
+
 
 
 }
