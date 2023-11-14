@@ -13,12 +13,11 @@ public class Appointment {
     private Service service; // add Service reference
     private Employee employee; // add Employee reference
 
-    // existing code...
+
 
     public Client getClient() {
         return client;
     }
-
     public void setClient(Client client) {
         this.client = client;
     }

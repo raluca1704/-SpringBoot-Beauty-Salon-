@@ -40,4 +40,7 @@ public class AppointmentController {
     public void deleteAppointment(int clientID, int employeeID, int serviceID, LocalDateTime dateTime) {
         appointmentRepository.deleteAppointment(clientID, employeeID, serviceID, dateTime);
     }
+    public List<Appointment> getAppointmentsByClientID(int clientID) {
+        return appointmentRepository.getAppointmentsByClientID(clientID);
+    }
 }

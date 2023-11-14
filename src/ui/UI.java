@@ -6,6 +6,7 @@ import  controller.AppointmentController;
 import controller.LoyaltyCardController;
 import  controller.ClientController;
 import databasemodell.*;
+import controller.FeedbackController;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -16,17 +17,19 @@ import java.util.Scanner;
 public class UI {
     //   private final Appointment appointmentController;
     private final ServiceController serviceController;
+    private  final  FeedbackController feedbackController;
     private final EmployeeController employeeController;
 
     private final AppointmentController appointmentController;
     private final LoyaltyCardController loyaltyCardController;
     private final ClientController clientController;
-    public UI(ClientController clientController,LoyaltyCardController loyaltyCardController,ServiceController serviceController, EmployeeController employeeController, AppointmentController appointmentController) {
+    public UI(FeedbackController feedbackController, ClientController clientController,LoyaltyCardController loyaltyCardController,ServiceController serviceController, EmployeeController employeeController, AppointmentController appointmentController) {
         this.employeeController=employeeController;
         this.serviceController = serviceController;
         this.appointmentController=appointmentController;
         this.loyaltyCardController=loyaltyCardController;
         this.clientController=clientController;
+        this.feedbackController=feedbackController;
     }
 
     public void start() {
@@ -64,7 +67,12 @@ public class UI {
                     viewAppointments();
                     break;
                 case 5:
+                    handleLoyaltyCard();
                     break;
+                case 6:
+                    getReceipt();
+                case 7:
+                    giveFeedback();
                 default:
                     System.out.println("Invalid choice. Please try again.");
             }
@@ -77,7 +85,7 @@ public class UI {
         String name1 = scanner3.nextLine();
         Client client1 = new Client();
         client1.setName(name1);
-        // Set other client information...
+        clientController.addClient(client1);
 
         // Choose service
         Scanner scanner = new Scanner(System.in);
@@ -240,6 +248,77 @@ public class UI {
         loyaltyCard.setDiscount(20); // You can set the default discount value
         loyaltyCardController.addLoyaltyCard(loyaltyCard);
     }
+    public void getReceipt() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter your name to get the receipt: ");
+        String clientName = scanner.nextLine();
+
+        // Retrieve client by name
+        Client client = clientController.getClientByName(clientName);
+
+        if (client != null) {
+            System.out.println("Fetching receipt for " + client.getName() + "...\n");
+
+            // Retrieve client's appointments
+            List<Appointment> clientAppointments = appointmentController.getAppointmentsByClientID(client.getClientID());
+
+            if (clientAppointments.isEmpty()) {
+                System.out.println("No appointments found for " + client.getName());
+            } else {
+                float totalCost = 0;
+
+                System.out.println("Receipt for " + client.getName() + ":\n");
+
+                for (Appointment appointment : clientAppointments) {
+                    Service service = appointment.getService();
+                    float servicePrice = service.getPrice();
+
+                    // Check for loyalty card and apply discount
+                    LoyaltyCard loyaltyCard = loyaltyCardController.getLoyaltyCardByClientID(client.getClientID());
+                    if (loyaltyCard != null) {
+                        float discountPercentage = loyaltyCard.getDiscount();
+                        float discountedPrice = servicePrice - (servicePrice * (discountPercentage / 100));
+                        totalCost += discountedPrice;
+                        System.out.println(service.getName() + " - Original Price: " + servicePrice + " - Discounted Price: " + discountedPrice);
+                    } else {
+                        totalCost += servicePrice;
+                        System.out.println(service.getName() + " - Price: " + servicePrice);
+                    }
+                }
+
+                System.out.println("\nTotal Cost: $" + totalCost);
+            }
+
+            // Now you can use the 'client' object and 'clientAppointments' list to generate the receipt.
+        } else {
+            System.out.println("Client not found with name: " + clientName);
+        }
+    }
+    private void giveFeedback() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter your name to give feedback: ");
+        String clientName = scanner.nextLine();
+
+        Client client = clientController.getClientByName(clientName);
+
+        if (client != null) {
+            Feedback feedback = new Feedback();
+
+            System.out.print("Enter your feedback description: ");
+            feedback.setDescription(scanner.nextLine());
+
+            System.out.print("Enter your feedback stars (0-5): ");
+            float stars = scanner.nextFloat();
+            feedback.setStars(stars);
+
+            feedback.setClientID(client.getClientID());
+            feedbackController.addFeedback(feedback);
+            System.out.println("Thank you for your feedback!");
+        } else {
+            System.out.println("Client not found with name: " + clientName);
+        }
+    }
+
 
 
 }

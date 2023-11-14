@@ -71,6 +71,15 @@ import java.time.LocalDateTime;
                             appointment.getDateTime().equals(dateTime)
             );
         }
+        public List<Appointment> getAppointmentsByClientID(int clientID) {
+            List<Appointment> clientAppointments = new ArrayList<>();
+            for (Appointment appointment : appointments) {
+                if (appointment.getClientID() == clientID) {
+                    clientAppointments.add(appointment);
+                }
+            }
+            return clientAppointments;
+        }
     }
 
 

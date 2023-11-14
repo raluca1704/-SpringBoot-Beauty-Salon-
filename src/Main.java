@@ -7,6 +7,7 @@ import repository.*;
 import ui.UI;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.time.LocalTime;
 
 public class Main {
@@ -17,6 +18,9 @@ public class Main {
         LoyaltyCardController loyaltyCardController= new LoyaltyCardController(loyaltyCardRepository);
      ClientRepository clientRepository= new ClientRepository();
      ClientController clientController= new ClientController(clientRepository);
+
+     FeedbackRepository feedbackRepository= new FeedbackRepository();
+     FeedbackController feedbackController= new FeedbackController(feedbackRepository);
 
      EmployeeRepository employeeRepository=new EmployeeRepository();
         EmployeeController employeeController= new EmployeeController(employeeRepository);
@@ -244,9 +248,30 @@ public class Main {
         employeeController.addEmployee(employee6);
         employeeController.addEmployee(employee7);
         employeeController.addEmployee(employee8);
+//        Client client= new Client();
+//        client.setEmail("newemail@yahoo.com");
+//        client.setClientID(999);
+//        client.setName("raluca");
+//        client.setTelephoneNumber("075345999");
+//        clientController.addClient(client);
+//
+//// Retrieve a client (you may need to modify this based on your logic)
+//     Appointment appointment = new Appointment();
+//     appointment.setServiceID(1);
+//     appointment.setEmployeeID(1001);
+//     appointment.setDateTime(LocalDateTime.of(2023, 01, 01, 11, 30));
+//
+//// Retrieve a client (you may need to modify this based on your logic)
+//     Client client1 = clientController.getClientByName("raluca");
+//
+//// Set the client for the appointment
+//     appointment.setClient(client1);
+//
+//// Add the appointment
+//     appointmentController.addAppointment(appointment);
 
-        // Create the ui.UI
-        UI ui = new UI(clientController, loyaltyCardController, serviceController, employeeController, appointmentController);
+
+     UI ui = new UI(feedbackController, clientController, loyaltyCardController, serviceController, employeeController, appointmentController);
 
         // Start the ui.UI
         ui.start();
