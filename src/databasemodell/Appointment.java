@@ -15,6 +15,7 @@ public class Appointment {
 
 
 
+
     public Client getClient() {
         return client;
     }

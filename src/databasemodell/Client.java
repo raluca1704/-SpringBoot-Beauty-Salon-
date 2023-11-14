@@ -1,6 +1,8 @@
 package databasemodell;
 
-public class Client {
+import observer.Observer;
+
+public class Client implements Observer {
     private int clientID;
     private String email;
     private String name;
@@ -42,5 +44,8 @@ public class Client {
         this.email = email;
     }
 
-
+    @Override
+    public void update(String message) {
+        System.out.println("Notification for " + this.getName() + ": " + message);
+    }
 }

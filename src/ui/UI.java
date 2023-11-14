@@ -23,7 +23,11 @@ public class UI {
     private final AppointmentController appointmentController;
     private final LoyaltyCardController loyaltyCardController;
     private final ClientController clientController;
-    public UI(FeedbackController feedbackController, ClientController clientController,LoyaltyCardController loyaltyCardController,ServiceController serviceController, EmployeeController employeeController, AppointmentController appointmentController) {
+
+    private static UI instance;
+
+    // Private constructor prevents instantiation from other classes
+    private UI(FeedbackController feedbackController, ClientController clientController,LoyaltyCardController loyaltyCardController,ServiceController serviceController, EmployeeController employeeController, AppointmentController appointmentController) {
         this.employeeController=employeeController;
         this.serviceController = serviceController;
         this.appointmentController=appointmentController;
@@ -31,6 +35,17 @@ public class UI {
         this.clientController=clientController;
         this.feedbackController=feedbackController;
     }
+
+    // Public method to get the instance
+    public static UI getInstance(FeedbackController feedbackController, ClientController clientController,
+                                 LoyaltyCardController loyaltyCardController, ServiceController serviceController,
+                                 EmployeeController employeeController, AppointmentController appointmentController) {
+        if (instance == null) {
+            instance = new UI(feedbackController, clientController, loyaltyCardController, serviceController, employeeController, appointmentController);
+        }
+        return instance;
+    }
+
 
     public void start() {
         Scanner scanner = new Scanner(System.in);
@@ -119,7 +134,7 @@ public class UI {
         appointmentController.addAppointment(appointment);
 
 
-        System.out.println("Appointment created successfully!");
+//        System.out.println("Appointment created successfully!");
 
     }
 
@@ -318,18 +333,4 @@ public class UI {
             System.out.println("Client not found with name: " + clientName);
         }
     }
-
-
-
 }
-
-
-
-
-
-
-
-
-
-
-

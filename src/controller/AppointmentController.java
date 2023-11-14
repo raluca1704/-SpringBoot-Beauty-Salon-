@@ -1,12 +1,16 @@
 package controller;
 
 import databasemodell.Appointment;
+import observer.Subject;
 import repository.AppointmentRepository;
 
 import java.time.LocalDateTime;
 import java.util.List;
 
-public class AppointmentController {
+import observer.Observer;
+import java.util.ArrayList;
+
+public class AppointmentController implements Subject {
     private AppointmentRepository appointmentRepository;
 
     public AppointmentController(AppointmentRepository appointmentRepository) {
@@ -15,6 +19,9 @@ public class AppointmentController {
 
     public void addAppointment(Appointment appointment) {
         appointmentRepository.addAppointment(appointment);
+
+        registerObserver(appointment.getClient()); // Assuming getClient returns a Client object
+        notifyObservers("Your appointment on " + appointment.getDateTime() + " is confirmed.");
     }
 
     public List<Appointment> getAppointmentsForClient(int clientID) {
@@ -42,5 +49,24 @@ public class AppointmentController {
     }
     public List<Appointment> getAppointmentsByClientID(int clientID) {
         return appointmentRepository.getAppointmentsByClientID(clientID);
+    }
+
+    private List<Observer> observers = new ArrayList<>();
+
+    @Override
+    public void registerObserver(Observer o) {
+        observers.add(o);
+    }
+
+    @Override
+    public void removeObserver(Observer o) {
+        observers.remove(o);
+    }
+
+    @Override
+    public void notifyObservers(String message) {
+        for (Observer observer : observers) {
+            observer.update(message);
+        }
     }
 }

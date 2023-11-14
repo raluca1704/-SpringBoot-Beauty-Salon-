@@ -3,28 +3,37 @@ package databasemodell;
 import java.time.LocalDate;
 import java.time.LocalTime;
 
-public class Employee extends Client {
+public class Employee {
     private int employeeID;
+    private String name;
     private LocalDate birthDate;
     private LocalTime workStartTime;
     private LocalTime workEndTime;
     private int serviceID;
     private String rating;
 
-    public int getServiceID() {
-        return serviceID;
+    // Private constructor to enforce use of the Builder
+    private Employee(Builder builder) {
+        this.employeeID = builder.employeeID;
+        this.name = builder.name;
+        this.birthDate = builder.birthDate;
+        this.workStartTime = builder.workStartTime;
+        this.workEndTime = builder.workEndTime;
+        this.serviceID = builder.serviceID;
+        this.rating = builder.rating;
     }
 
-    public void setWorkStartTime(LocalTime workStartTime) {
-        this.workStartTime = workStartTime;
+    // Getters
+    public int getEmployeeID() {
+        return employeeID;
     }
 
-    public void setWorkEndTime(LocalTime workEndTime) {
-        this.workEndTime = workEndTime;
+    public String getName() {
+        return name;
     }
 
-    public void setServiceID(int serviceID) {
-        this.serviceID = serviceID;
+    public LocalDate getBirthDate() {
+        return birthDate;
     }
 
     public LocalTime getWorkStartTime() {
@@ -35,27 +44,61 @@ public class Employee extends Client {
         return workEndTime;
     }
 
-    public int getEmployeeID() {
-        return employeeID;
-    }
-
-    public void setEmployeeID(int employeeID) {
-        this.employeeID = employeeID;
-    }
-
-    public LocalDate getBirthDate() {
-        return birthDate;
-    }
-
-    public void setBirthDate(LocalDate birthDate) {
-        this.birthDate = birthDate;
+    public int getServiceID() {
+        return serviceID;
     }
 
     public String getRating() {
         return rating;
     }
 
-    public void setRating(String rating) {
-        this.rating = rating;
+    // Static Builder class
+    public static class Builder {
+        private int employeeID;
+        private String name;
+        private LocalDate birthDate;
+        private LocalTime workStartTime;
+        private LocalTime workEndTime;
+        private int serviceID;
+        private String rating;
+
+        public Builder employeeID(int employeeID) {
+            this.employeeID = employeeID;
+            return this;
+        }
+
+        public Builder name(String name) {
+            this.name = name;
+            return this;
+        }
+
+        public Builder birthDate(LocalDate birthDate) {
+            this.birthDate = birthDate;
+            return this;
+        }
+
+        public Builder workStartTime(LocalTime workStartTime) {
+            this.workStartTime = workStartTime;
+            return this;
+        }
+
+        public Builder workEndTime(LocalTime workEndTime) {
+            this.workEndTime = workEndTime;
+            return this;
+        }
+
+        public Builder serviceID(int serviceID) {
+            this.serviceID = serviceID;
+            return this;
+        }
+
+        public Builder rating(String rating) {
+            this.rating = rating;
+            return this;
+        }
+
+        public Employee build() {
+            return new Employee(this);
+        }
     }
 }
