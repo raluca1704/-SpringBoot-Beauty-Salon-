@@ -165,6 +165,7 @@ public class Main {
 
 
         Employee employee1 = new Employee();
+     employee1.setTelephoneNumber("07333333");
         employee1.setServiceID(1);
         employee1.setEmployeeID(1001);
         employee1.setName("John Smith");
@@ -174,6 +175,7 @@ public class Main {
         employee1.setWorkEndTime(LocalTime.of(16, 0));
 
         Employee employee2 = new Employee();
+     employee2.setTelephoneNumber("07333333");
         employee2.setServiceID(2);
         employee2.setEmployeeID(1002);
         employee2.setName("Alice Johnson");
@@ -183,6 +185,7 @@ public class Main {
         employee2.setWorkEndTime(LocalTime.of(20, 0));
 
         Employee employee3 = new Employee();
+     employee3.setTelephoneNumber("07333333");
         employee3.setServiceID(3);
         employee3.setEmployeeID(1003);
         employee3.setName("David Lee");
@@ -194,6 +197,7 @@ public class Main {
         Employee employee4 = new Employee();
 
         employee4.setServiceID(4);
+     employee4.setTelephoneNumber("07333333");
         employee4.setEmployeeID(1004);
         employee4.setName("Emily Davis");
         employee4.setBirthDate(LocalDate.of(1995, 3, 25));
@@ -202,6 +206,7 @@ public class Main {
         employee4.setWorkEndTime(LocalTime.of(18, 0));
 
         Employee employee5 = new Employee();
+     employee5.setTelephoneNumber("07333333");
         employee5.setServiceID(5);
         employee5.setEmployeeID(1005);
         employee5.setName("Johanna Smith");
@@ -211,6 +216,7 @@ public class Main {
         employee5.setWorkEndTime(LocalTime.of(12, 0));
 
         Employee employee6 = new Employee();
+     employee6.setTelephoneNumber("07333333");
         employee6.setServiceID(6);
         employee6.setEmployeeID(1006);
         employee6.setName("Marry Jhons");
@@ -220,7 +226,7 @@ public class Main {
         employee6.setWorkEndTime(LocalTime.of(20, 30));
 
         Employee employee7 = new Employee();
-
+        employee7.setTelephoneNumber("07333333");
         employee7.setServiceID(7);
         employee7.setEmployeeID(1007);
         employee7.setName("Clara Claris");
