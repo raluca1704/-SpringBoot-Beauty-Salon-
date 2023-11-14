@@ -4,13 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a569ba57-d531-498c-b278-8422563d28cd" name="Changes" comment="modificat ui">
+    <list default="true" id="a569ba57-d531-498c-b278-8422563d28cd" name="Changes" comment="finalizat ui">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/AppointmentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/AppointmentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/databasemodell/Appointment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/databasemodell/Appointment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/repository/AppointmentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/repository/AppointmentRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/UI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/UI.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,7 +75,7 @@
       <workItem from="1698527030965" duration="6226000" />
       <workItem from="1698658295359" duration="1441000" />
       <workItem from="1698732956455" duration="4923000" />
-      <workItem from="1699808442844" duration="19293000" />
+      <workItem from="1699808442844" duration="20961000" />
     </task>
     <task id="LOCAL-00001" summary="mostenire employee">
       <option name="closed" value="true" />
@@ -146,7 +141,15 @@
       <option name="project" value="LOCAL" />
       <updated>1699891455067</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="finalizat ui">
+      <option name="closed" value="true" />
+      <created>1699983467896</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1699983467896</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -161,6 +164,7 @@
     <MESSAGE value="ui" />
     <MESSAGE value="2 teste add si getall" />
     <MESSAGE value="modificat ui" />
-    <option name="LAST_COMMIT_MESSAGE" value="modificat ui" />
+    <MESSAGE value="finalizat ui" />
+    <option name="LAST_COMMIT_MESSAGE" value="finalizat ui" />
   </component>
 </project>
