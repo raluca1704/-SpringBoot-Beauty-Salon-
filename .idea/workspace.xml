@@ -4,18 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a569ba57-d531-498c-b278-8422563d28cd" name="Changes" comment="patterns">
-      <change afterPath="$PROJECT_DIR$/src/SqlServer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/databasemodell/EmployeeBuilderTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/factory/ServiceFactoryTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/mysql-connector-j-8.2.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/observer/ObserverTest.java" afterDir="false" />
+    <list default="true" id="a569ba57-d531-498c-b278-8422563d28cd" name="Changes" comment="connected to database">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab2SALON_FRUMUSETE.iml" beforeDir="false" afterPath="$PROJECT_DIR$/lab2SALON_FRUMUSETE.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/AppointmentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/AppointmentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/databasemodell/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/databasemodell/Employee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/repository/AppointmentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/repository/AppointmentRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/UI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/UI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SqlServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/repository/SqlServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mysql-connector-j-8.2.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/src/repository/mysql-connector-j-8.2.0.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/repository/EmployeeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/repository/EmployeeRepository.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,13 +76,16 @@
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\raluc\IdeaProjects\lab2SALON_FRUMUSETE\src\repository" />
+    </key>
     <key name="CreateTestDialog.RecentsKey">
       <recent name="repository" />
     </key>
   </component>
   <component name="RunManager">
     <configuration name="SqlServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="SqlServer" />
+      <option name="MAIN_CLASS_NAME" value="repository.SqlServer" />
       <module name="lab2SALON_FRUMUSETE" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -118,7 +115,7 @@
       <workItem from="1701006420597" duration="2619000" />
       <workItem from="1701009915661" duration="546000" />
       <workItem from="1701010693370" duration="1848000" />
-      <workItem from="1701169013081" duration="3638000" />
+      <workItem from="1701169013081" duration="6110000" />
     </task>
     <task id="LOCAL-00001" summary="mostenire employee">
       <option name="closed" value="true" />
@@ -224,7 +221,15 @@
       <option name="project" value="LOCAL" />
       <updated>1699997767255</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="connected to database">
+      <option name="closed" value="true" />
+      <created>1701173518080</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1701173518080</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -242,6 +247,7 @@
     <MESSAGE value="finalizat ui" />
     <MESSAGE value="mostenirea" />
     <MESSAGE value="patterns" />
-    <option name="LAST_COMMIT_MESSAGE" value="patterns" />
+    <MESSAGE value="connected to database" />
+    <option name="LAST_COMMIT_MESSAGE" value="connected to database" />
   </component>
 </project>
