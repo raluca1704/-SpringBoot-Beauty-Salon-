@@ -26,7 +26,7 @@ public class UI {
 
     private static UI instance;
 
-    // Private constructor prevents instantiation from other classes
+
     private UI(FeedbackController feedbackController, ClientController clientController,LoyaltyCardController loyaltyCardController,ServiceController serviceController, EmployeeController employeeController, AppointmentController appointmentController) {
         this.employeeController=employeeController;
         this.serviceController = serviceController;
@@ -36,7 +36,7 @@ public class UI {
         this.feedbackController=feedbackController;
     }
 
-    // Public method to get the instance
+
     public static UI getInstance(FeedbackController feedbackController, ClientController clientController,
                                  LoyaltyCardController loyaltyCardController, ServiceController serviceController,
                                  EmployeeController employeeController, AppointmentController appointmentController) {
@@ -86,8 +86,10 @@ public class UI {
                     break;
                 case 6:
                     getReceipt();
+                    break;
                 case 7:
                     giveFeedback();
+                    break;
                 default:
                     System.out.println("Invalid choice. Please try again.");
             }

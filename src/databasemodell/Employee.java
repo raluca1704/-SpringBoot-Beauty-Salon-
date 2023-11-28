@@ -12,7 +12,7 @@ public class Employee {
     private int serviceID;
     private String rating;
 
-    // Private constructor to enforce use of the Builder
+
     private Employee(Builder builder) {
         this.employeeID = builder.employeeID;
         this.name = builder.name;
@@ -52,7 +52,7 @@ public class Employee {
         return rating;
     }
 
-    // Static Builder class
+
     public static class Builder {
         private int employeeID;
         private String name;

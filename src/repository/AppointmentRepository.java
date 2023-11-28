@@ -8,6 +8,7 @@ import java.time.LocalDateTime;
 
     public class AppointmentRepository {
         private List<Appointment> appointments;
+        private String notification;
 
         public AppointmentRepository() {
             this.appointments = new ArrayList<>();
@@ -15,6 +16,7 @@ import java.time.LocalDateTime;
 
         public void addAppointment(Appointment appointment) {
             appointments.add(appointment);
+            notification = "Your appointment on " + appointment.getDateTime() + " is confirmed.";
         }
 
         public List<Appointment> getAppointmentsForClient(int clientID) {
@@ -80,6 +82,12 @@ import java.time.LocalDateTime;
             }
             return clientAppointments;
         }
+
+
+        public String getNotification() {
+            return notification;
+        }
     }
+
 
 

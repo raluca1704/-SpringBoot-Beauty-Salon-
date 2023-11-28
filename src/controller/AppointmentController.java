@@ -20,7 +20,7 @@ public class AppointmentController implements Subject {
     public void addAppointment(Appointment appointment) {
         appointmentRepository.addAppointment(appointment);
 
-        registerObserver(appointment.getClient()); // Assuming getClient returns a Client object
+        registerObserver(appointment.getClient());
         notifyObservers("Your appointment on " + appointment.getDateTime() + " is confirmed.");
     }
 
@@ -55,7 +55,12 @@ public class AppointmentController implements Subject {
 
     @Override
     public void registerObserver(Observer o) {
-        observers.add(o);
+        if (o != null) {
+            observers.add(o);
+        } else {
+            System.out.println("Attempted to register a null observer.");
+        }
+
     }
 
     @Override
