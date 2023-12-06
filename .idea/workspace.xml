@@ -4,250 +4,134 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a569ba57-d531-498c-b278-8422563d28cd" name="Changes" comment="connected to database">
+    <list default="true" id="643606a0-bdb3-400d-91d7-93dd09d7a333" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/controller/EmployeeServiceController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/databasemodell/EmployeeService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/factory/ServiceFactoryTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/repository/AppointmentRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/repository/ClientRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/repository/EmployeeServiceRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/repository/SqlServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SqlServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/repository/SqlServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mysql-connector-j-8.2.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/src/repository/mysql-connector-j-8.2.0.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/repository/EmployeeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/repository/EmployeeRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab2SALON_FRUMUSETE.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/AppointmentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/controller/AppointmentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/ClientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/controller/ClientController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/EmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/controller/EmployeeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/EmployeeServiceController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/FeedbackController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/controller/FeedbackController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/LoyaltyCardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/controller/LoyaltyCardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/controller/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/ProductReceiptController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/controller/ProductReceiptController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/ReceiptController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/controller/ReceiptController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/ServiceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/controller/ServiceController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/databasemodell/Appointment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/databasemodell/Appointment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/databasemodell/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/databasemodell/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/databasemodell/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/databasemodell/Employee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/databasemodell/EmployeeBuilderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/databasemodell/EmployeeBuilderTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/databasemodell/EmployeeService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/databasemodell/Feedback.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/databasemodell/Feedback.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/databasemodell/LoyaltyCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/databasemodell/LoyaltyCard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/databasemodell/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/databasemodell/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/databasemodell/ProductReceipt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/databasemodell/ProductReceipt.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/databasemodell/Receipt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/databasemodell/Receipt.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/databasemodell/Service.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/databasemodell/Service.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/factory/ServiceFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/factory/ServiceFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/factory/ServiceFactoryTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/observer/Observer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/observer/Observer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/observer/ObserverTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/observer/ObserverTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/observer/Subject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/observer/Subject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/repository/AppointmentRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/repository/ClientRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/repository/EmployeeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/repository/EmployeeRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/repository/EmployeeRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/repository/EmployeeRepositoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/repository/EmployeeServiceRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/repository/FeedbackRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/repository/FeedbackRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/repository/LoyaltyCardRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/repository/LoyaltyCardRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/repository/ProductReceiptRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/repository/ProductReceiptRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/repository/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/repository/ProductRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/repository/ReceiptRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/repository/ReceiptRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/repository/ServiceRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/repository/ServiceRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/repository/SqlServer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/repository/mysql-connector-j-8.2.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/repository/mysql-connector-j-8.2.0.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/UI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/ui/UI.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="JUnit5 Test Class" />
-        <option value="Interface" />
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectColorInfo">{
-  &quot;customColor&quot;: &quot;&quot;,
-  &quot;associatedIndex&quot;: 3
+  &quot;associatedIndex&quot;: 2
 }</component>
-  <component name="ProjectId" id="2XLxOPAvh12qbFocsc3UCjtHfiQ" />
+  <component name="ProjectId" id="2YzVxgNzZsDS7T8Kcjggn8EiOqe" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;create.test.in.the.same.root&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/raluc/IdeaProjects/lab2SALON_FRUMUSETE/src/mysql-connector-j-8.2.0.jar&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/Users/raluc/IdeaProjects/lab2SALON_FRUMUSETE",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "onboarding.tips.debug.path": "C:/Users/raluc/IdeaProjects/lab2SALON_FRUMUSETE/src/main/java/org/example/Main.java",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;sqlserver&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
     ]
   }
-}</component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\raluc\IdeaProjects\lab2SALON_FRUMUSETE\src" />
-    </key>
-    <key name="CreateTestDialog.Recents.Supers">
-      <recent name="" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\raluc\IdeaProjects\lab2SALON_FRUMUSETE\src\repository" />
-    </key>
-    <key name="CreateTestDialog.RecentsKey">
-      <recent name="repository" />
-    </key>
-  </component>
+}]]></component>
   <component name="RunManager">
-    <configuration name="SqlServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="repository.SqlServer" />
+    <configuration default="true" type="JetRunConfigurationType">
       <module name="lab2SALON_FRUMUSETE" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.SqlServer" />
-      </list>
-    </recent_temporary>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="lab2SALON_FRUMUSETE" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="a569ba57-d531-498c-b278-8422563d28cd" name="Changes" comment="" />
-      <created>1698422131155</created>
+      <changelist id="643606a0-bdb3-400d-91d7-93dd09d7a333" name="Changes" comment="" />
+      <created>1701528643283</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1698422131155</updated>
-      <workItem from="1698422133894" duration="298000" />
-      <workItem from="1698422489932" duration="25515000" />
-      <workItem from="1698527030965" duration="6226000" />
-      <workItem from="1698658295359" duration="1441000" />
-      <workItem from="1698732956455" duration="4923000" />
-      <workItem from="1699808442844" duration="32093000" />
-      <workItem from="1700547191035" duration="626000" />
-      <workItem from="1701006420597" duration="2619000" />
-      <workItem from="1701009915661" duration="546000" />
-      <workItem from="1701010693370" duration="1848000" />
-      <workItem from="1701169013081" duration="6110000" />
+      <updated>1701528643283</updated>
+      <workItem from="1701528644336" duration="4078000" />
+      <workItem from="1701756644849" duration="707000" />
+      <workItem from="1701842910647" duration="361000" />
     </task>
-    <task id="LOCAL-00001" summary="mostenire employee">
-      <option name="closed" value="true" />
-      <created>1698427281522</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1698427281522</updated>
-    </task>
-    <task id="LOCAL-00002" summary="ui-afisare employee">
-      <option name="closed" value="true" />
-      <created>1698429596324</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1698429596324</updated>
-    </task>
-    <task id="LOCAL-00003" summary="controllere">
-      <option name="closed" value="true" />
-      <created>1698506543260</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1698506543260</updated>
-    </task>
-    <task id="LOCAL-00004" summary="restul controllelor">
-      <option name="closed" value="true" />
-      <created>1698509681881</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1698509681881</updated>
-    </task>
-    <task id="LOCAL-00005" summary="metoda 3 appointment">
-      <option name="closed" value="true" />
-      <created>1698516993443</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1698516993443</updated>
-    </task>
-    <task id="LOCAL-00006" summary="ui">
-      <option name="closed" value="true" />
-      <created>1698771863005</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1698771863005</updated>
-    </task>
-    <task id="LOCAL-00007" summary="2 teste add si getall">
-      <option name="closed" value="true" />
-      <created>1698773071471</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1698773071471</updated>
-    </task>
-    <task id="LOCAL-00008" summary="modificat ui">
-      <option name="closed" value="true" />
-      <created>1699891455061</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1699891455067</updated>
-    </task>
-    <task id="LOCAL-00009" summary="finalizat ui">
-      <option name="closed" value="true" />
-      <created>1699983467896</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1699983467896</updated>
-    </task>
-    <task id="LOCAL-00010" summary="finalizat ui">
-      <option name="closed" value="true" />
-      <created>1699986246730</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1699986246730</updated>
-    </task>
-    <task id="LOCAL-00011" summary="mostenirea">
-      <option name="closed" value="true" />
-      <created>1699991948629</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1699991948629</updated>
-    </task>
-    <task id="LOCAL-00012" summary="mostenirea">
-      <option name="closed" value="true" />
-      <created>1699991963791</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1699991963791</updated>
-    </task>
-    <task id="LOCAL-00013" summary="patterns">
-      <option name="closed" value="true" />
-      <created>1699997767255</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1699997767255</updated>
-    </task>
-    <task id="LOCAL-00014" summary="connected to database">
-      <option name="closed" value="true" />
-      <created>1701173518080</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1701173518080</updated>
-    </task>
-    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="mostenire employee" />
-    <MESSAGE value="ui-afisare employee" />
-    <MESSAGE value="controllere" />
-    <MESSAGE value="restul controllelor" />
-    <MESSAGE value="metoda 3 appointment" />
-    <MESSAGE value="ui" />
-    <MESSAGE value="2 teste add si getall" />
-    <MESSAGE value="modificat ui" />
-    <MESSAGE value="finalizat ui" />
-    <MESSAGE value="mostenirea" />
-    <MESSAGE value="patterns" />
-    <MESSAGE value="connected to database" />
-    <option name="LAST_COMMIT_MESSAGE" value="connected to database" />
   </component>
 </project>
