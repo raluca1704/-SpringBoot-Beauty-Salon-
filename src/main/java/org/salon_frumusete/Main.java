@@ -9,12 +9,19 @@ import org.salon_frumusete.factory.ServiceFactory;
 import org.salon_frumusete.repository.*;
 import org.salon_frumusete.ui.UI;
 
+
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+
+@SpringBootApplication
 public class Main {
     public static void main(String[] args) {
+        SpringApplication.run(Main.class,args);
+
         AppointmentRepository appointmentRepository=new AppointmentRepository();
         AppointmentController appointmentController= new AppointmentController(appointmentRepository);
         ServiceRepository serviceRepository = new ServiceRepository();
@@ -32,14 +39,13 @@ public class Main {
 
 
 
-        Client client = new Client();
-        client.setName("aaaaa");
-        client.setTelephoneNumber("0746787877");
-        client.setEmail("sssss@gmail.com");
-
-        clientRepository.addClient(client);
-
-
+        Client clientotadd = new Client();
+        clientotadd.setTelephoneNumber("wwww");
+        clientotadd.setEmail("emailtest");
+        clientotadd.setName("test");
+        clientRepository.addClient(clientotadd);
+        System.out.println(clientRepository.getAllClients());
+       // clientRepository.deleteClient(client.getClientID());
 
         // Replace direct Service instantiation with factory.ServiceFactory
         serviceController.addService(ServiceFactory.createService(1, "Hairstyling", 200));
@@ -151,6 +157,10 @@ public class Main {
         employeeController.addEmployee(employee7);
         employeeController.addEmployee(employee8);
 
+
+//        // Set Haircut service strategy
+//        serviceController.setServiceStrategy(new HaircutService());
+//        serviceController.performService();
 
 
 //        // Create default entities

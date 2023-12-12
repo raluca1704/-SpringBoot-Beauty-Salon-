@@ -1,6 +1,13 @@
 package org.salon_frumusete.databasemodell;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "loyalty_card")
 public class LoyaltyCard {
+    @Id
     private int loyaltyCardID;
     private int clientID;
     private float discount;

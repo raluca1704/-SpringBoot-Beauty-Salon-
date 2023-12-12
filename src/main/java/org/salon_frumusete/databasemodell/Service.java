@@ -1,7 +1,14 @@
 package org.salon_frumusete.databasemodell;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "service")
 public class Service {
 
+    @Id
     private int serviceID;
 
     private String name;

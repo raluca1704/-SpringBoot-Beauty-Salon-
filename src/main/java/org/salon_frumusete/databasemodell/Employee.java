@@ -1,9 +1,15 @@
 package org.salon_frumusete.databasemodell;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 import java.time.LocalDate;
 import java.time.LocalTime;
 
+@Entity
+@Table(name = "employee")
 public class Employee {
+    @Id
     private int employeeID;
     private String name;
     private LocalDate birthDate;
@@ -12,93 +18,60 @@ public class Employee {
     private int serviceID;
     private String rating;
 
-
-    private Employee(Builder builder) {
-        this.employeeID = builder.employeeID;
-        this.name = builder.name;
-        this.birthDate = builder.birthDate;
-        this.workStartTime = builder.workStartTime;
-        this.workEndTime = builder.workEndTime;
-        this.serviceID = builder.serviceID;
-        this.rating = builder.rating;
-    }
-
-    // Getters
+    // Getters and Setters
     public int getEmployeeID() {
         return employeeID;
+    }
+
+    public void setEmployeeID(int employeeID) {
+        this.employeeID = employeeID;
     }
 
     public String getName() {
         return name;
     }
 
+    public void setName(String name) {
+        this.name = name;
+    }
+
     public LocalDate getBirthDate() {
         return birthDate;
+    }
+
+    public void setBirthDate(LocalDate birthDate) {
+        this.birthDate = birthDate;
     }
 
     public LocalTime getWorkStartTime() {
         return workStartTime;
     }
 
+    public void setWorkStartTime(LocalTime workStartTime) {
+        this.workStartTime = workStartTime;
+    }
+
     public LocalTime getWorkEndTime() {
         return workEndTime;
+    }
+
+    public void setWorkEndTime(LocalTime workEndTime) {
+        this.workEndTime = workEndTime;
     }
 
     public int getServiceID() {
         return serviceID;
     }
 
+    public void setServiceID(int serviceID) {
+        this.serviceID = serviceID;
+    }
+
     public String getRating() {
         return rating;
     }
 
-
-    public static class Builder {
-        private int employeeID;
-        private String name;
-        private LocalDate birthDate;
-        private LocalTime workStartTime;
-        private LocalTime workEndTime;
-        private int serviceID;
-        private String rating;
-
-        public Builder employeeID(int employeeID) {
-            this.employeeID = employeeID;
-            return this;
-        }
-
-        public Builder name(String name) {
-            this.name = name;
-            return this;
-        }
-
-        public Builder birthDate(LocalDate birthDate) {
-            this.birthDate = birthDate;
-            return this;
-        }
-
-        public Builder workStartTime(LocalTime workStartTime) {
-            this.workStartTime = workStartTime;
-            return this;
-        }
-
-        public Builder workEndTime(LocalTime workEndTime) {
-            this.workEndTime = workEndTime;
-            return this;
-        }
-
-        public Builder serviceID(int serviceID) {
-            this.serviceID = serviceID;
-            return this;
-        }
-
-        public Builder rating(String rating) {
-            this.rating = rating;
-            return this;
-        }
-
-        public Employee build() {
-            return new Employee(this);
-        }
+    public void setRating(String rating) {
+        this.rating = rating;
     }
 }

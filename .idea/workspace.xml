@@ -4,70 +4,37 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="643606a0-bdb3-400d-91d7-93dd09d7a333" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/controller/EmployeeServiceController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/databasemodell/EmployeeService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/factory/ServiceFactoryTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/repository/AppointmentRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/repository/ClientRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/repository/EmployeeServiceRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/repository/SqlServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="643606a0-bdb3-400d-91d7-93dd09d7a333" name="Changes" comment="incercare spring">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/repository/ConnTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/strategy/Haircut.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/strategy/ServiceStrategy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab2SALON_FRUMUSETE.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/AppointmentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/controller/AppointmentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/ClientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/controller/ClientController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/EmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/controller/EmployeeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/EmployeeServiceController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/FeedbackController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/controller/FeedbackController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/LoyaltyCardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/controller/LoyaltyCardController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/controller/ProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/ProductReceiptController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/controller/ProductReceiptController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/ReceiptController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/controller/ReceiptController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/ServiceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/controller/ServiceController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/databasemodell/Appointment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/databasemodell/Appointment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/databasemodell/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/databasemodell/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/databasemodell/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/databasemodell/Employee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/databasemodell/EmployeeBuilderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/databasemodell/EmployeeBuilderTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/databasemodell/EmployeeService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/databasemodell/Feedback.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/databasemodell/Feedback.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/databasemodell/LoyaltyCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/databasemodell/LoyaltyCard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/databasemodell/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/databasemodell/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/databasemodell/ProductReceipt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/databasemodell/ProductReceipt.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/databasemodell/Receipt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/databasemodell/Receipt.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/databasemodell/Service.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/databasemodell/Service.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/factory/ServiceFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/factory/ServiceFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/factory/ServiceFactoryTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/observer/Observer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/observer/Observer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/observer/ObserverTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/observer/ObserverTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/observer/Subject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/observer/Subject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/repository/AppointmentRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/repository/ClientRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/repository/EmployeeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/repository/EmployeeRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/repository/EmployeeRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/repository/EmployeeRepositoryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/repository/EmployeeServiceRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/repository/FeedbackRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/repository/FeedbackRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/repository/LoyaltyCardRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/repository/LoyaltyCardRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/repository/ProductReceiptRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/repository/ProductReceiptRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/repository/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/repository/ProductRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/repository/ReceiptRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/repository/ReceiptRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/repository/ServiceRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/repository/ServiceRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/repository/SqlServer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/repository/mysql-connector-j-8.2.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/repository/mysql-connector-j-8.2.0.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/UI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/ui/UI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/controller/ServiceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/controller/ServiceController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/databasemodell/Appointment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/databasemodell/Appointment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/databasemodell/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/databasemodell/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/databasemodell/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/databasemodell/Employee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/databasemodell/Feedback.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/databasemodell/Feedback.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/databasemodell/LoyaltyCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/databasemodell/LoyaltyCard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/databasemodell/Service.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/databasemodell/Service.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/repository/AppointmentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/repository/AppointmentRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/repository/ClientRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/repository/ClientRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/repository/EmployeeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/repository/EmployeeRepository.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -81,28 +48,115 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/raluc/IdeaProjects/lab2SALON_FRUMUSETE",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "onboarding.tips.debug.path": "C:/Users/raluc/IdeaProjects/lab2SALON_FRUMUSETE/src/main/java/org/example/Main.java",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/raluc/IdeaProjects/lab2SALON_FRUMUSETE&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/raluc/IdeaProjects/lab2SALON_FRUMUSETE/src/main/java/org/example/Main.java&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
     ]
   }
-}]]></component>
-  <component name="RunManager">
+}</component>
+  <component name="RunManager" selected="JUnit.ConnTest.testaddclient">
+    <configuration name="ConnTest.testDatabaseConnection" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="MAP-Labor-2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.salon_frumusete.repository.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.salon_frumusete.repository" />
+      <option name="MAIN_CLASS_NAME" value="org.salon_frumusete.repository.ConnTest" />
+      <option name="METHOD_NAME" value="testDatabaseConnection" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ConnTest.testDeleteClient" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="MAP-Labor-2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.salon_frumusete.repository.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.salon_frumusete.repository" />
+      <option name="MAIN_CLASS_NAME" value="org.salon_frumusete.repository.ConnTest" />
+      <option name="METHOD_NAME" value="testDeleteClient" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ConnTest.testUpdateClient" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="MAP-Labor-2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.salon_frumusete.repository.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.salon_frumusete.repository" />
+      <option name="MAIN_CLASS_NAME" value="org.salon_frumusete.repository.ConnTest" />
+      <option name="METHOD_NAME" value="testUpdateClient" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ConnTest.testaddclient" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="MAP-Labor-2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.salon_frumusete.repository.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.salon_frumusete.repository" />
+      <option name="MAIN_CLASS_NAME" value="org.salon_frumusete.repository.ConnTest" />
+      <option name="METHOD_NAME" value="testaddclient" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ConnTest.testclient" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="MAP-Labor-2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.salon_frumusete.repository.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.salon_frumusete.repository" />
+      <option name="MAIN_CLASS_NAME" value="org.salon_frumusete.repository.ConnTest" />
+      <option name="METHOD_NAME" value="testclient" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="JetRunConfigurationType">
       <module name="lab2SALON_FRUMUSETE" />
       <method v="2">
@@ -116,6 +170,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Main" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="MAP-Labor-2" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="org.salon_frumusete.Main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.ConnTest.testUpdateClient" />
+        <item itemvalue="JUnit.ConnTest.testaddclient" />
+        <item itemvalue="JUnit.ConnTest.testDeleteClient" />
+        <item itemvalue="JUnit.ConnTest.testclient" />
+        <item itemvalue="JUnit.ConnTest.testDatabaseConnection" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -127,11 +197,49 @@
       <updated>1701528643283</updated>
       <workItem from="1701528644336" duration="4078000" />
       <workItem from="1701756644849" duration="707000" />
-      <workItem from="1701842910647" duration="361000" />
+      <workItem from="1701842910647" duration="6181000" />
+      <workItem from="1702383921169" duration="6064000" />
+      <workItem from="1702407945286" duration="3517000" />
     </task>
+    <task id="LOCAL-00001" summary="final cu mysql">
+      <option name="closed" value="true" />
+      <created>1701843388561</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1701843388561</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="dependencySupport" implementationName="java:org.springframework:spring-core" />
+    <option featureType="dependencySupport" implementationName="executable:docker" />
+    <option featureType="dependencySupport" implementationName="java:com.google.protobuf:protobuf-java" />
+    <option featureType="dependencySupport" implementationName="java:jakarta.persistence:jakarta.persistence-api" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework.data:spring-data-commons" />
+    <option featureType="dependencySupport" implementationName="executable:kubectl" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework.boot:spring-boot" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework:spring-webmvc" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="modicat primul repo,emmployee" />
+    <MESSAGE value="final cu mysql" />
+    <MESSAGE value="incercare spring" />
+    <option name="LAST_COMMIT_MESSAGE" value="incercare spring" />
   </component>
 </project>

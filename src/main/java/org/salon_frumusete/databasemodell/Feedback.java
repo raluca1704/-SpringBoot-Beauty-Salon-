@@ -1,10 +1,18 @@
 package org.salon_frumusete.databasemodell;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "feedback")
 public class Feedback {
+    @Id
     private int feedbackID;
     private int clientID;
     private String description;
     private float stars;
+
     public int getStars() {
         return (int) stars;
     }
