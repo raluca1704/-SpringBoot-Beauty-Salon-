@@ -2,33 +2,54 @@ package org.salon_frumusete.controller;
 
 import org.salon_frumusete.databasemodell.Feedback;
 import org.salon_frumusete.repository.FeedbackRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@RestController
+@RequestMapping("/api/feedback")
 public class FeedbackController {
+
+    @Autowired
     private FeedbackRepository feedbackRepository;
 
-    public FeedbackController(FeedbackRepository feedbackRepository) {
-        this.feedbackRepository =feedbackRepository;
+    @PostMapping
+    public ResponseEntity<Feedback> addFeedback(@RequestBody Feedback feedback) {
+        Feedback savedFeedback = feedbackRepository.save(feedback);
+        return ResponseEntity.ok(savedFeedback);
     }
 
-    public void addFeedback(Feedback feedback) {
-        feedbackRepository.addFeedback(feedback);
+    @GetMapping("/{feedbackId}")
+    public ResponseEntity<Feedback> getFeedbackById(@PathVariable int feedbackId) {
+        return feedbackRepository.findById(feedbackId)
+                .map(ResponseEntity::ok)
+                .orElse(ResponseEntity.notFound().build());
     }
 
-    public Feedback getFeedbackById(int feedbackID) {
-        return feedbackRepository.getFeedbackById(feedbackID);
+    @GetMapping
+    public ResponseEntity<List<Feedback>> getAllFeedbacks() {
+        return ResponseEntity.ok(feedbackRepository.findAll());
     }
 
-    public List<Feedback> getAllFeedbacks() {
-        return feedbackRepository.getAllFeedbacks();
+    @PutMapping("/{feedbackId}")
+    public ResponseEntity<Feedback> updateFeedback(@PathVariable int feedbackId, @RequestBody Feedback feedbackDetails) {
+        return feedbackRepository.findById(feedbackId)
+                .map(feedback -> {
+                    feedback.setDescription(feedbackDetails.getDescription());
+                    feedback.setStars(feedbackDetails.getStars());
+                    feedback.setClientID(feedbackDetails.getClientID());
+                    return ResponseEntity.ok(feedbackRepository.save(feedback));
+                }).orElse(ResponseEntity.notFound().build());
     }
 
-    public void updateFeedback(Feedback updatedFeedback) {
-        feedbackRepository.updateFeedback(updatedFeedback);
-    }
-
-    public void deleteFeedback(int feedbackID) {
-        feedbackRepository.deleteFeedback(feedbackID);
+    @DeleteMapping("/{feedbackId}")
+    public ResponseEntity<Void> deleteFeedback(@PathVariable int feedbackId) {
+        return feedbackRepository.findById(feedbackId)
+                .map(feedback -> {
+                    feedbackRepository.delete(feedback);
+                    return ResponseEntity.ok().<Void>build();
+                }).orElse(ResponseEntity.notFound().build());
     }
 }

@@ -5,23 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="643606a0-bdb3-400d-91d7-93dd09d7a333" name="Changes" comment="incercare spring">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/repository/ConnTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/strategy/Haircut.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/strategy/ServiceStrategy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/ui/SalonCLICommands.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/controller/AppointmentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/controller/AppointmentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/controller/ClientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/controller/ClientController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/controller/EmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/controller/EmployeeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/controller/FeedbackController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/controller/FeedbackController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/controller/LoyaltyCardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/controller/LoyaltyCardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/controller/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/controller/ProductReceiptController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/controller/ProductReceiptController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/controller/ReceiptController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/controller/ReceiptController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/controller/ServiceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/controller/ServiceController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/databasemodell/Appointment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/databasemodell/Appointment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/databasemodell/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/databasemodell/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/databasemodell/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/databasemodell/Employee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/databasemodell/Feedback.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/databasemodell/Feedback.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/databasemodell/LoyaltyCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/databasemodell/LoyaltyCard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/databasemodell/Service.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/databasemodell/Service.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/repository/AppointmentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/repository/AppointmentRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/repository/ClientRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/repository/ClientRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/repository/EmployeeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/repository/EmployeeRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/repository/ProductReceiptRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/repository/ProductReceiptRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/repository/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/repository/ProductRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/repository/ReceiptRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/repository/ReceiptRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/repository/SqlServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/repository/SqlServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/repository/mysql-connector-j-8.2.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/ui/UI.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,6 +66,7 @@
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/raluc/IdeaProjects/lab2SALON_FRUMUSETE/src/main/java/org/example/Main.java&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
@@ -179,8 +182,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ConnTest.testUpdateClient" />
         <item itemvalue="JUnit.ConnTest.testaddclient" />
+        <item itemvalue="JUnit.ConnTest.testUpdateClient" />
         <item itemvalue="JUnit.ConnTest.testDeleteClient" />
         <item itemvalue="JUnit.ConnTest.testclient" />
         <item itemvalue="JUnit.ConnTest.testDatabaseConnection" />
@@ -199,7 +202,8 @@
       <workItem from="1701756644849" duration="707000" />
       <workItem from="1701842910647" duration="6181000" />
       <workItem from="1702383921169" duration="6064000" />
-      <workItem from="1702407945286" duration="3517000" />
+      <workItem from="1702407945286" duration="9165000" />
+      <workItem from="1702448883973" duration="596000" />
     </task>
     <task id="LOCAL-00001" summary="final cu mysql">
       <option name="closed" value="true" />
@@ -209,7 +213,15 @@
       <option name="project" value="LOCAL" />
       <updated>1701843388561</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="incercare spring">
+      <option name="closed" value="true" />
+      <created>1702412044377</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1702412044377</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -217,13 +229,18 @@
   </component>
   <component name="UnknownFeatures">
     <option featureType="dependencySupport" implementationName="java:org.springframework:spring-core" />
-    <option featureType="dependencySupport" implementationName="executable:docker" />
     <option featureType="dependencySupport" implementationName="java:com.google.protobuf:protobuf-java" />
-    <option featureType="dependencySupport" implementationName="java:jakarta.persistence:jakarta.persistence-api" />
+    <option featureType="dependencySupport" implementationName="java:jakarta.validation:jakarta.validation-api" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework.shell:spring-shell-standard" />
     <option featureType="dependencySupport" implementationName="java:org.springframework.data:spring-data-commons" />
     <option featureType="dependencySupport" implementationName="executable:kubectl" />
-    <option featureType="dependencySupport" implementationName="java:org.springframework.boot:spring-boot" />
+    <option featureType="dependencySupport" implementationName="java:org.hibernate.validator:hibernate-validator" />
     <option featureType="dependencySupport" implementationName="java:org.springframework:spring-webmvc" />
+    <option featureType="dependencySupport" implementationName="java:org.projectlombok:lombok" />
+    <option featureType="dependencySupport" implementationName="executable:docker" />
+    <option featureType="dependencySupport" implementationName="java:jakarta.persistence:jakarta.persistence-api" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework:spring-messaging" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework.boot:spring-boot" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -241,5 +258,15 @@
     <MESSAGE value="final cu mysql" />
     <MESSAGE value="incercare spring" />
     <option name="LAST_COMMIT_MESSAGE" value="incercare spring" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.sql.SQLSyntaxErrorException" package="java.sql" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

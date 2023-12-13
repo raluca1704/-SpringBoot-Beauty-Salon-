@@ -1,76 +1,67 @@
 package org.salon_frumusete.controller;
 
 import org.salon_frumusete.databasemodell.Appointment;
-import org.salon_frumusete.observer.Observer;
-import org.salon_frumusete.observer.Subject;
 import org.salon_frumusete.repository.AppointmentRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
 
-import java.time.LocalDateTime;
-import java.util.ArrayList;
 import java.util.List;
 
-public class AppointmentController implements Subject {
+@RestController
+@RequestMapping("/api/appointments")
+public class AppointmentController {
+
+    @Autowired
     private AppointmentRepository appointmentRepository;
 
-    public AppointmentController(AppointmentRepository appointmentRepository) {
-        this.appointmentRepository = appointmentRepository;
+    @PostMapping
+    public ResponseEntity<Appointment> addAppointment(@RequestBody Appointment appointment) {
+        Appointment savedAppointment = appointmentRepository.save(appointment);
+        return ResponseEntity.ok(savedAppointment);
     }
 
-    public void addAppointment(Appointment appointment) {
-        appointmentRepository.addAppointment(appointment);
-
-        registerObserver(appointment.getClient());
-        notifyObservers("Your appointment on " + appointment.getDateTime() + " is confirmed.");
+    @GetMapping("/client/{clientId}")
+    public ResponseEntity<List<Appointment>> getAppointmentsByClientId(@PathVariable int clientId) {
+        List<Appointment> appointments = appointmentRepository.findByClientId(clientId);
+        return ResponseEntity.ok(appointments);
     }
 
-    public List<Appointment> getAppointmentsForClient(int clientID) {
-        return appointmentRepository.getAppointmentsForClient(clientID);
+    @GetMapping("/employee/{employeeId}")
+    public ResponseEntity<List<Appointment>> getAppointmentsByEmployeeId(@PathVariable int employeeId) {
+        List<Appointment> appointments = appointmentRepository.findByEmployeeId(employeeId);
+        return ResponseEntity.ok(appointments);
     }
 
-    public List<Appointment> getAppointmentsForEmployee(int employeeID) {
-        return appointmentRepository.getAppointmentsForEmployee(employeeID);
+    @GetMapping("/service/{serviceId}")
+    public ResponseEntity<List<Appointment>> getAppointmentsByServiceId(@PathVariable int serviceId) {
+        List<Appointment> appointments = appointmentRepository.findByServiceId(serviceId);
+        return ResponseEntity.ok(appointments);
     }
 
-    public List<Appointment> getAppointmentsForService(int serviceID) {
-        return appointmentRepository.getAppointmentsForService(serviceID);
+    @GetMapping
+    public ResponseEntity<List<Appointment>> getAllAppointments() {
+        return ResponseEntity.ok(appointmentRepository.findAll());
     }
 
-    public List<Appointment> getAllAppointments() {
-        return appointmentRepository.getAllAppointments();
+    @PutMapping("/{appointmentId}")
+    public ResponseEntity<Appointment> updateAppointment(@PathVariable int appointmentId, @RequestBody Appointment appointmentDetails) {
+        return appointmentRepository.findById(appointmentId)
+                .map(appointment -> {
+                    appointment.setClient(appointmentDetails.getClient());
+                    appointment.setEmployee(appointmentDetails.getEmployee());
+                    appointment.setService(appointmentDetails.getService());
+                    appointment.setDateTime(appointmentDetails.getDateTime());
+                    return ResponseEntity.ok(appointmentRepository.save(appointment));
+                }).orElse(ResponseEntity.notFound().build());
     }
 
-    public void updateAppointment(Appointment updatedAppointment) {
-        appointmentRepository.updateAppointment(updatedAppointment);
-    }
-
-    public void deleteAppointment(int clientID, int employeeID) {
-        appointmentRepository.deleteAppointment(clientID, employeeID);
-    }
-    public List<Appointment> getAppointmentsByClientID(int clientID) {
-        return appointmentRepository.getAppointmentsByClientID(clientID);
-    }
-
-    private List<Observer> observers = new ArrayList<>();
-
-    @Override
-    public void registerObserver(Observer o) {
-        if (o != null) {
-            observers.add(o);
-        } else {
-            System.out.println("Attempted to register a null observer.");
-        }
-
-    }
-
-    @Override
-    public void removeObserver(Observer o) {
-        observers.remove(o);
-    }
-
-    @Override
-    public void notifyObservers(String message) {
-        for (Observer observer : observers) {
-            observer.update(message);
-        }
+    @DeleteMapping("/{appointmentId}")
+    public ResponseEntity<Void> deleteAppointment(@PathVariable int appointmentId) {
+        return appointmentRepository.findById(appointmentId)
+                .map(appointment -> {
+                    appointmentRepository.delete(appointment);
+                    return ResponseEntity.ok().<Void>build();
+                }).orElse(ResponseEntity.notFound().build());
     }
 }

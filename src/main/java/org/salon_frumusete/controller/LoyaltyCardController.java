@@ -2,32 +2,62 @@ package org.salon_frumusete.controller;
 
 import org.salon_frumusete.databasemodell.LoyaltyCard;
 import org.salon_frumusete.repository.LoyaltyCardRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@RestController
+@RequestMapping("/api/loyaltycards")
 public class LoyaltyCardController {
+
+    @Autowired
     private LoyaltyCardRepository loyaltyCardRepository;
 
-    public LoyaltyCardController(LoyaltyCardRepository loyaltyCardRepository) {
-        this.loyaltyCardRepository=loyaltyCardRepository;
-    }
-    public void addLoyaltyCard(LoyaltyCard loyaltyCard){
-        loyaltyCardRepository.addLoyaltyCard(loyaltyCard);
-    }
-    public LoyaltyCard getLoyaltyCardByID(int loyaltyCardID){
-        return loyaltyCardRepository.getLoyaltyCardByID(loyaltyCardID);
-
-    }
-    public List<LoyaltyCard> getAllLoyaltyCards(){
-        return loyaltyCardRepository.getAllLoyaltyCards();
+    @PostMapping
+    public ResponseEntity<LoyaltyCard> addLoyaltyCard(@RequestBody LoyaltyCard loyaltyCard) {
+        LoyaltyCard savedLoyaltyCard = loyaltyCardRepository.save(loyaltyCard);
+        return ResponseEntity.ok(savedLoyaltyCard);
     }
 
-    public void updateLoyaltyCard(LoyaltyCard updatedLoyaltyCard) {
-        loyaltyCardRepository.updateLoyaltyCard(updatedLoyaltyCard);
-
+    @GetMapping("/{loyaltyCardId}")
+    public ResponseEntity<LoyaltyCard> getLoyaltyCardById(@PathVariable int loyaltyCardId) {
+        return loyaltyCardRepository.findById(loyaltyCardId)
+                .map(ResponseEntity::ok)
+                .orElse(ResponseEntity.notFound().build());
     }
-    public LoyaltyCard getLoyaltyCardByClientID(int clientID) {
-        return loyaltyCardRepository.getLoyaltyCardByClientID(clientID);
+
+    @GetMapping
+    public ResponseEntity<List<LoyaltyCard>> getAllLoyaltyCards() {
+        return ResponseEntity.ok(loyaltyCardRepository.findAll());
     }
 
+    @PutMapping("/{loyaltyCardId}")
+    public ResponseEntity<LoyaltyCard> updateLoyaltyCard(@PathVariable int loyaltyCardId, @RequestBody LoyaltyCard loyaltyCardDetails) {
+        return loyaltyCardRepository.findById(loyaltyCardId)
+                .map(loyaltyCard -> {
+                    loyaltyCard.setDiscount(loyaltyCardDetails.getDiscount());
+                    return ResponseEntity.ok(loyaltyCardRepository.save(loyaltyCard));
+                }).orElse(ResponseEntity.notFound().build());
+    }
+
+    @DeleteMapping("/{loyaltyCardId}")
+    public ResponseEntity<Void> deleteLoyaltyCard(@PathVariable int loyaltyCardId) {
+        return loyaltyCardRepository.findById(loyaltyCardId)
+                .map(loyaltyCard -> {
+                    loyaltyCardRepository.delete(loyaltyCard);
+                    return ResponseEntity.ok().<Void>build();
+                }).orElse(ResponseEntity.notFound().build());
+    }
+
+    @GetMapping("/client/{clientId}")
+    public ResponseEntity<LoyaltyCard> getLoyaltyCardByClientId(@PathVariable int clientId) {
+        LoyaltyCard loyaltyCard = loyaltyCardRepository.findByClientId(clientId);
+        if (loyaltyCard != null) {
+            return ResponseEntity.ok(loyaltyCard);
+        } else {
+            return ResponseEntity.notFound().build();
+        }
+    }
 }

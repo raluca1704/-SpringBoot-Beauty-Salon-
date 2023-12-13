@@ -2,37 +2,59 @@ package org.salon_frumusete.controller;
 
 import org.salon_frumusete.databasemodell.Client;
 import org.salon_frumusete.repository.ClientRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@RestController
+@RequestMapping("/api/clients")
 public class ClientController {
+
+    @Autowired
     private ClientRepository clientRepository;
 
-    public ClientController(ClientRepository clientRepository) {
-        this.clientRepository = clientRepository;
+    @PostMapping
+    public ResponseEntity<Client> addClient(@RequestBody Client client) {
+        Client savedClient = clientRepository.save(client);
+        return ResponseEntity.ok(savedClient);
     }
 
-    public void addClient(Client client) {
-        clientRepository.addClient(client);
+    @GetMapping("/{clientId}")
+    public ResponseEntity<Client> getClientById(@PathVariable int clientId) {
+        return clientRepository.findById(clientId)
+                .map(ResponseEntity::ok)
+                .orElse(ResponseEntity.notFound().build());
     }
 
-    public Client getClientById(int clientID) {
-        return clientRepository.getClientById(clientID);
+    @GetMapping
+    public ResponseEntity<List<Client>> getAllClients() {
+        return ResponseEntity.ok(clientRepository.findAll());
     }
 
-    public List<Client> getAllClients() {
-        return clientRepository.getAllClients();
+    @PutMapping("/{clientId}")
+    public ResponseEntity<Client> updateClient(@PathVariable int clientId, @RequestBody Client clientDetails) {
+        return clientRepository.findById(clientId)
+                .map(client -> {
+                    client.setName(clientDetails.getName());
+                    client.setEmail(clientDetails.getEmail());
+                    client.setTelephoneNumber(clientDetails.getTelephoneNumber());
+                    return ResponseEntity.ok(clientRepository.save(client));
+                }).orElse(ResponseEntity.notFound().build());
     }
 
-    public void updateClient(Client updatedClient) {
-        clientRepository.updateClient(updatedClient);
+    @DeleteMapping("/{clientId}")
+    public ResponseEntity<Void> deleteClient(@PathVariable int clientId) {
+        return clientRepository.findById(clientId)
+                .map(client -> {
+                    clientRepository.delete(client);
+                    return ResponseEntity.ok().<Void>build();
+                }).orElse(ResponseEntity.notFound().build());
     }
 
-    public void deleteClient(int clientID) {
-        clientRepository.deleteClient(clientID);
+    @GetMapping("/search")
+    public ResponseEntity<List<Client>> getClientsByName(@RequestParam String name) {
+        return ResponseEntity.ok(clientRepository.findByNameContaining(name));
     }
-    public Client getClientByName(String name) {
-        return clientRepository.getClientByName(name);
-    }
-
 }
