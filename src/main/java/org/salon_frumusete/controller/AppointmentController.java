@@ -23,19 +23,19 @@ public class AppointmentController {
 
     @GetMapping("/client/{clientId}")
     public ResponseEntity<List<Appointment>> getAppointmentsByClientId(@PathVariable int clientId) {
-        List<Appointment> appointments = appointmentRepository.findByClientId(clientId);
+        List<Appointment> appointments = appointmentRepository.findByClient_ClientID(clientId);
         return ResponseEntity.ok(appointments);
     }
 
     @GetMapping("/employee/{employeeId}")
     public ResponseEntity<List<Appointment>> getAppointmentsByEmployeeId(@PathVariable int employeeId) {
-        List<Appointment> appointments = appointmentRepository.findByEmployeeId(employeeId);
+        List<Appointment> appointments = appointmentRepository.findByEmployee_EmployeeID(employeeId);
         return ResponseEntity.ok(appointments);
     }
 
     @GetMapping("/service/{serviceId}")
     public ResponseEntity<List<Appointment>> getAppointmentsByServiceId(@PathVariable int serviceId) {
-        List<Appointment> appointments = appointmentRepository.findByServiceId(serviceId);
+        List<Appointment> appointments = appointmentRepository.findByService_ServiceID(serviceId);
         return ResponseEntity.ok(appointments);
     }
 
@@ -44,24 +44,29 @@ public class AppointmentController {
         return ResponseEntity.ok(appointmentRepository.findAll());
     }
 
-    @PutMapping("/{appointmentId}")
-    public ResponseEntity<Appointment> updateAppointment(@PathVariable int appointmentId, @RequestBody Appointment appointmentDetails) {
-        return appointmentRepository.findById(appointmentId)
-                .map(appointment -> {
-                    appointment.setClient(appointmentDetails.getClient());
-                    appointment.setEmployee(appointmentDetails.getEmployee());
-                    appointment.setService(appointmentDetails.getService());
-                    appointment.setDateTime(appointmentDetails.getDateTime());
-                    return ResponseEntity.ok(appointmentRepository.save(appointment));
-                }).orElse(ResponseEntity.notFound().build());
-    }
-
-    @DeleteMapping("/{appointmentId}")
-    public ResponseEntity<Void> deleteAppointment(@PathVariable int appointmentId) {
-        return appointmentRepository.findById(appointmentId)
-                .map(appointment -> {
-                    appointmentRepository.delete(appointment);
-                    return ResponseEntity.ok().<Void>build();
-                }).orElse(ResponseEntity.notFound().build());
-    }
+//    @PutMapping("/{clientId}/{dateTime}")
+//    public ResponseEntity<Appointment> updateAppointment(
+//            @PathVariable int clientId,
+//            @PathVariable String dateTime,
+//            @RequestBody Appointment appointmentDetails
+//    ) {
+//        return appointmentRepository.findByClient_ClientIDAndDateTime(clientId, LocalDateTime.parse(dateTime))
+//                .map(appointment -> {
+//                    appointment.setEmployee(appointmentDetails.getEmployee());
+//                    appointment.setService(appointmentDetails.getService());
+//                    return ResponseEntity.ok(appointmentRepository.save(appointment));
+//                }).orElse(ResponseEntity.notFound().build());
+//    }
+//
+//    @DeleteMapping("/{clientId}/{dateTime}")
+//    public ResponseEntity<Void> deleteAppointment(
+//            @PathVariable int clientId,
+//            @PathVariable String dateTime
+//    ) {
+//        return appointmentRepository.findByClient_ClientIDAndDateTime(clientId, LocalDateTime.parse(dateTime))
+//                .map(appointment -> {
+//                    appointmentRepository.delete(appointment);
+//                    return ResponseEntity.ok().<Void>build();
+//                }).orElse(ResponseEntity.notFound().build());
+//    }
 }

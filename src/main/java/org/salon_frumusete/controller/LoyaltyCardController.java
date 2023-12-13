@@ -53,7 +53,7 @@ public class LoyaltyCardController {
 
     @GetMapping("/client/{clientId}")
     public ResponseEntity<LoyaltyCard> getLoyaltyCardByClientId(@PathVariable int clientId) {
-        LoyaltyCard loyaltyCard = loyaltyCardRepository.findByClientId(clientId);
+        LoyaltyCard loyaltyCard = loyaltyCardRepository.findByClientID(clientId);
         if (loyaltyCard != null) {
             return ResponseEntity.ok(loyaltyCard);
         } else {
