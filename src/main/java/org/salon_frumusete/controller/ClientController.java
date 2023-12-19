@@ -12,11 +12,13 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/clients")
-public class ClientController {
+public class ClientController  {
+
 
     @Autowired
     private ClientRepository clientRepository;
     private List<Observer> observers = new ArrayList<>();
+
 
     @PostMapping
     public ResponseEntity<Client> addClient(@RequestBody Client client) {
@@ -63,7 +65,6 @@ public class ClientController {
     public ResponseEntity<List<Client>> getClientsByName(@RequestParam String name) {
         return ResponseEntity.ok(clientRepository.findByNameContaining(name));
     }
-
 //    @Override
 //    public void registerObserver(Observer o) {
 //        observers.add(o);
@@ -80,4 +81,5 @@ public class ClientController {
 //            observer.update(message);
 //        }
 //    }
+
 }

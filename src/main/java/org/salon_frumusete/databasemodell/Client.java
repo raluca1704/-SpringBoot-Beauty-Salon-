@@ -6,6 +6,8 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import java.util.ArrayList;
+import java.util.List;
 
 
 @Entity
@@ -19,6 +21,7 @@ public class Client implements Observer {
     private String name;
 
     private String telephoneNumber;
+
     public Client() {
     }
 
@@ -56,8 +59,10 @@ public class Client implements Observer {
         this.email = email;
     }
 
+
     @Override
     public void update(String message) {
         System.out.println("Notification for " + this.getName() + ": " + message);
     }
+
 }

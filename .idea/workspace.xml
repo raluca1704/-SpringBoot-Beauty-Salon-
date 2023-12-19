@@ -4,33 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="643606a0-bdb3-400d-91d7-93dd09d7a333" name="Changes" comment="eroare request">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/controller/DummyController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/databasemodell/AnniversaryGiftDecorator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/databasemodell/LoyaltyCardDecorator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/strategy/PremiumServiceOperation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/strategy/ServiceOperationContext.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/strategy/StandardServiceOperation.java" afterDir="false" />
+    <list default="true" id="643606a0-bdb3-400d-91d7-93dd09d7a333" name="Changes" comment="REQUEST SUCCSES, design fail">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/extra/dataloadeer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/controller/ClientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/controller/ClientController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/controller/LoyaltyCardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/controller/LoyaltyCardController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/controller/ProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/controller/ProductReceiptController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/controller/ProductReceiptController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/controller/ReceiptController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/controller/ReceiptController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/controller/ServiceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/controller/ServiceController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/databasemodell/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/databasemodell/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/databasemodell/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/databasemodell/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/databasemodell/ProductReceipt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/databasemodell/ProductReceipt.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/databasemodell/Receipt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/databasemodell/Receipt.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/observer/Subject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/observer/Subject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/repository/ClientRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/repository/ClientRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/repository/ProductReceiptRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/repository/ProductReceiptRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/repository/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/repository/ProductRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/repository/ReceiptRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/repository/ReceiptRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/strategy/Haircut.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/strategy/ServiceStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/strategy/ServiceOperationStrategy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/databasemodell/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/databasemodell/Employee.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -212,7 +190,7 @@
       <workItem from="1702407945286" duration="9165000" />
       <workItem from="1702448883973" duration="6671000" />
       <workItem from="1702898931925" duration="974000" />
-      <workItem from="1702900800869" duration="9910000" />
+      <workItem from="1702900800869" duration="13462000" />
     </task>
     <task id="LOCAL-00001" summary="final cu mysql">
       <option name="closed" value="true" />
@@ -254,7 +232,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702454396809</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="REQUEST SUCCSES, design fail">
+      <option name="closed" value="true" />
+      <created>1702984608385</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1702984608385</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -292,7 +278,8 @@
     <MESSAGE value="incercare spring" />
     <MESSAGE value="unknown database" />
     <MESSAGE value="eroare request" />
-    <option name="LAST_COMMIT_MESSAGE" value="eroare request" />
+    <MESSAGE value="REQUEST SUCCSES, design fail" />
+    <option name="LAST_COMMIT_MESSAGE" value="REQUEST SUCCSES, design fail" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
