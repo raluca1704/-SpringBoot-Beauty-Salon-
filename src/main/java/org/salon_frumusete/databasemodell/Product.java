@@ -1,9 +1,23 @@
 package org.salon_frumusete.databasemodell;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "product")
 public class Product {
+    @Id
     private int productID;
+
+    @Column(name = "name")
     private String name;
+
+    @Column(name = "price")
     private double price;
+
+    @Column(name = "quantity_in_stock")
     private int quantityInStock;
 
     public int getProductID() {

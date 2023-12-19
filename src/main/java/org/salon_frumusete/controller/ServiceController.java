@@ -2,6 +2,9 @@ package org.salon_frumusete.controller;
 
 import org.salon_frumusete.databasemodell.Service;
 import org.salon_frumusete.repository.ServiceRepository;
+import org.salon_frumusete.strategy.PremiumServiceOperation;
+import org.salon_frumusete.strategy.ServiceOperationContext;
+import org.salon_frumusete.strategy.StandardServiceOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -14,6 +17,9 @@ public class ServiceController {
 
     @Autowired
     private ServiceRepository serviceRepository;
+    private ServiceOperationContext standardOperationContext = new ServiceOperationContext(new StandardServiceOperation());
+    private ServiceOperationContext premiumOperationContext = new ServiceOperationContext(new PremiumServiceOperation());
+
 
     @PostMapping
     public ResponseEntity<Service> addService(@RequestBody Service service) {
@@ -56,7 +62,25 @@ public class ServiceController {
     public ResponseEntity<List<Service>> getServicesByName(@RequestParam String name) {
         return ResponseEntity.ok(serviceRepository.findByNameContaining(name));
     }
+    @PostMapping("/{serviceId}/perform-standard-operation")
+    public ResponseEntity<String> performStandardOperation(@PathVariable int serviceId) {
+        Service service = serviceRepository.findById(serviceId).orElse(null);
+        if (service != null) {
+            standardOperationContext.executeOperation(service);
+            return ResponseEntity.ok("Standard operation performed for service: " + service.getName());
+        } else {
+            return ResponseEntity.notFound().build();
+        }
+    }
 
-    // Note: The performService method that was delegating operation to a strategy pattern is not typically a part of REST API design.
-    // You may want to handle such operations through a different mechanism, depending on your application's architecture.
+    @PostMapping("/{serviceId}/perform-premium-operation")
+    public ResponseEntity<String> performPremiumOperation(@PathVariable int serviceId) {
+        Service service = serviceRepository.findById(serviceId).orElse(null);
+        if (service != null) {
+            premiumOperationContext.executeOperation(service);
+            return ResponseEntity.ok("Premium operation performed for service: " + service.getName());
+        } else {
+            return ResponseEntity.notFound().build();
+        }
+    }
 }

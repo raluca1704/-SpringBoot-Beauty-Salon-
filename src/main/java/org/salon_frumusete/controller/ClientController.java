@@ -1,11 +1,13 @@
 package org.salon_frumusete.controller;
 
 import org.salon_frumusete.databasemodell.Client;
+import org.salon_frumusete.observer.Observer;
 import org.salon_frumusete.repository.ClientRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @RestController
@@ -14,6 +16,7 @@ public class ClientController {
 
     @Autowired
     private ClientRepository clientRepository;
+    private List<Observer> observers = new ArrayList<>();
 
     @PostMapping
     public ResponseEntity<Client> addClient(@RequestBody Client client) {
@@ -30,6 +33,9 @@ public class ClientController {
 
     @GetMapping
     public ResponseEntity<List<Client>> getAllClients() {
+        for (Client client : clientRepository.findAll()) {
+            System.out.println(client.getName());
+        }
         return ResponseEntity.ok(clientRepository.findAll());
     }
 
@@ -57,4 +63,21 @@ public class ClientController {
     public ResponseEntity<List<Client>> getClientsByName(@RequestParam String name) {
         return ResponseEntity.ok(clientRepository.findByNameContaining(name));
     }
+
+//    @Override
+//    public void registerObserver(Observer o) {
+//        observers.add(o);
+//    }
+//
+//    @Override
+//    public void removeObserver(Observer o) {
+//        observers.remove(o);
+//    }
+//
+//    @Override
+//    public void notifyObservers(String message) {
+//        for (Observer observer : observers) {
+//            observer.update(message);
+//        }
+//    }
 }

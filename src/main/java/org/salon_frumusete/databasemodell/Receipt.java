@@ -1,12 +1,26 @@
 package org.salon_frumusete.databasemodell;
 
+import javax.persistence.*;
 import java.time.LocalDateTime;
 
+@Entity
+@Table(name = "receipt")
 public class Receipt {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int receiptID;
+
+    @Column(name = "client_id")
     private int clientID;
+
+    @Column(name = "appointment_id")
     private int appointmentID;
+
+    @Column(name = "payment_date_time")
     private LocalDateTime paymentDateTime;
+
+    @Column(name = "amount_paid")
     private double amountPaid;
 
     public int getReceiptID() {
@@ -47,5 +61,5 @@ public class Receipt {
 
     public void setAmountPaid(double amountPaid) {
         this.amountPaid = amountPaid;
-}
+    }
 }

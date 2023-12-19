@@ -2,6 +2,7 @@ package org.salon_frumusete.databasemodell;
 
 import org.salon_frumusete.observer.Observer;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
@@ -10,11 +11,16 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "client")
 public class Client implements Observer {
+
+
     @Id
     private int clientID;
     private String email;
     private String name;
+
     private String telephoneNumber;
+    public Client() {
+    }
 
     public int getClientID() {
         return clientID;
