@@ -1,7 +1,9 @@
 package org.salon_frumusete.factory;
 
 import org.salon_frumusete.databasemodell.Service;
+import org.springframework.stereotype.Component;
 
+@Component
 public class ServiceFactory {
 
     public static Service createService(int serviceID, String name, float price) {
