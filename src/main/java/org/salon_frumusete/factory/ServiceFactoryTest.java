@@ -17,7 +17,7 @@ public class ServiceFactoryTest {
 
     @Test
     public void testCreateService() {
-        int serviceID = 21;
+        int serviceID = 3333;
         String name = "Hairsomething";
         float price = 30.0f;
 
@@ -27,6 +27,6 @@ public class ServiceFactoryTest {
         assertEquals(serviceID, service.getServiceID());
         assertEquals(name, service.getName());
         assertEquals(price, service.getPrice(), 0.001);
-        System.out.println("Service Factory Integration Test Success");
+        System.out.println("Service Factory Test Success");
     }
 }
