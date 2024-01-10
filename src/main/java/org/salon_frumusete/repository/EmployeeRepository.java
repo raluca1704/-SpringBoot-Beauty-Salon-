@@ -7,4 +7,5 @@ import java.util.List;
 
 public interface EmployeeRepository extends JpaRepository<Employee, Integer> {
     List<Employee> findByNameContaining(String name);
+    List<Employee> findByOrderByRatingDesc();
 }

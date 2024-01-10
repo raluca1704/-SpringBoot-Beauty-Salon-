@@ -1,10 +1,7 @@
 package org.salon_frumusete.extra;
 
 import org.salon_frumusete.controller.*;
-import org.salon_frumusete.databasemodell.Appointment;
-import org.salon_frumusete.databasemodell.Client;
-import org.salon_frumusete.databasemodell.Employee;
-import org.salon_frumusete.databasemodell.Service;
+import org.salon_frumusete.databasemodell.*;
 import org.salon_frumusete.factory.ServiceFactory;
 import org.salon_frumusete.repository.*;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -43,6 +40,13 @@ public class dataloadeer implements CommandLineRunner {
 
         // Replace direct Service instantiation with factory.ServiceFactory
         serviceRepository.save(ServiceFactory.createService(1, "Hairstyling", 200));
+        Service haircutService = new Service();
+        haircutService.setServiceID(1);
+        haircutService.setName("Haircut");
+        haircutService.setPrice(50.0f);
+        haircutService.setPricingStrategy(new RegularPricingStrategy());
+        float loyaltyCardDiscount = 0.1f;
+        float finalPrice = haircutService.calculateFinalPrice(loyaltyCardDiscount);
         serviceRepository.save(ServiceFactory.createService(2, "Haircoloring", 70));
         serviceRepository.save(ServiceFactory.createService(3, "Haircutting", 150));
         serviceRepository.save(ServiceFactory.createService(5, "Semipemanent Manicure", 100));

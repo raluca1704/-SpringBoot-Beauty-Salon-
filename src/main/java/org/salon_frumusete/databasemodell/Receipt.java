@@ -10,16 +10,12 @@ public class Receipt {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int receiptID;
-
     @Column(name = "client_id")
     private int clientID;
-
     @Column(name = "appointment_id")
     private int appointmentID;
-
     @Column(name = "payment_date_time")
     private LocalDateTime paymentDateTime;
-
     @Column(name = "amount_paid")
     private double amountPaid;
 

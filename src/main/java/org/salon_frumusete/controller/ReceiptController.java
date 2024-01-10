@@ -1,7 +1,9 @@
 package org.salon_frumusete.controller;
 
+import org.salon_frumusete.databasemodell.PricingStrategy;
 import org.salon_frumusete.databasemodell.Product;
 import org.salon_frumusete.databasemodell.Receipt;
+import org.salon_frumusete.databasemodell.ReceiptGenerator;
 import org.salon_frumusete.repository.ReceiptRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -19,6 +21,7 @@ public class ReceiptController {
     @PostMapping
     public ResponseEntity<Receipt> addReceipt(@RequestBody Receipt receipt) {
         Receipt savedReceipt = receiptRepository.save(receipt);
+
         return ResponseEntity.ok(savedReceipt);
 
     }

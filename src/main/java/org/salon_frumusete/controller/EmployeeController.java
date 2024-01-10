@@ -60,4 +60,9 @@ public class EmployeeController {
     public ResponseEntity<List<Employee>> getEmployeesByName(@RequestParam String name) {
         return ResponseEntity.ok(employeeRepository.findByNameContaining(name));
     }
+    @GetMapping("/ordered-by-rating")
+    public ResponseEntity<List<Employee>> getEmployeesOrderedByRating() {
+        List<Employee> employees = employeeRepository.findByOrderByRatingDesc();
+        return ResponseEntity.ok(employees);
+    }
 }

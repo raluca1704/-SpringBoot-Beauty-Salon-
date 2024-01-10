@@ -3,6 +3,7 @@ package org.salon_frumusete.databasemodell;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.Transient;
 
 @Entity
 @Table(name = "service")
@@ -15,6 +16,19 @@ public class Service {
     private float price;
 
 
+    @Transient
+    private PricingStrategy pricingStrategy;
+
+    // Getters and Setters
+
+    public void setPricingStrategy(PricingStrategy pricingStrategy) {
+        this.pricingStrategy = pricingStrategy;
+    }
+
+    public float calculateFinalPrice(float loyaltyCardDiscount) {
+
+        return (pricingStrategy != null) ? pricingStrategy.calculateFinalPrice(price, loyaltyCardDiscount) : price;
+    }
 
     public String getName() {
         return name;

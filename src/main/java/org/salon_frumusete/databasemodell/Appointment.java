@@ -73,6 +73,7 @@
 //
 //}
 package org.salon_frumusete.databasemodell;
+
 import javax.persistence.*;
 import java.time.LocalDateTime;
 
@@ -80,22 +81,25 @@ import java.time.LocalDateTime;
 @Table(name = "appointment")
 public class Appointment {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
-
+     private int appointmentID;
     @ManyToOne
     @JoinColumn(name = "clientID", referencedColumnName = "clientID")
     private Client client;
-
     @ManyToOne
     @JoinColumn(name = "employeeID", referencedColumnName = "employeeID")
     private Employee employee;
-
     @ManyToOne
     @JoinColumn(name = "serviceID", referencedColumnName = "serviceID")
     private Service service;
-
     private LocalDateTime dateTime;
+
+    public int getAppointmentID() {
+        return appointmentID;
+    }
+
+    public void setAppointmentID(int appointmentID) {
+        this.appointmentID = appointmentID;
+    }
 
     // Getters and Setters
     public Client getClient() {

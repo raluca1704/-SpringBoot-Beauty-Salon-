@@ -2,10 +2,7 @@ package org.salon_frumusete.databasemodell;
 
 import org.salon_frumusete.observer.Observer;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -21,6 +18,9 @@ public class Client implements Observer {
     private String name;
 
     private String telephoneNumber;
+    @OneToMany(mappedBy = "client")
+    private List<ProductReceipt> productClientAssociations = new ArrayList<>();
+
 
     public Client() {
     }

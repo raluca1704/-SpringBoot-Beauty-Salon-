@@ -1,9 +1,8 @@
 package org.salon_frumusete.databasemodell;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name = "product")
@@ -19,6 +18,9 @@ public class Product {
 
     @Column(name = "quantity_in_stock")
     private int quantityInStock;
+    @OneToMany(mappedBy = "product")
+    private List<ProductReceipt> productClientAssociations = new ArrayList<>();
+
 
     public int getProductID() {
         return productID;

@@ -5,8 +5,48 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="643606a0-bdb3-400d-91d7-93dd09d7a333" name="Changes" comment="test builder, factory">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/controller/controllertest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/databasemodell/CARDTEST.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/databasemodell/Distributor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/databasemodell/LoyltyCardINTERFACE.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/databasemodell/PricingStrategy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/databasemodell/ReceiptGenerator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/databasemodell/VIPDiscountDecorator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/application-test.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/cdfbd732-06bf-4aaa-9d7d-cacc02ffbd59.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/cdfbd732-06bf-4aaa-9d7d-cacc02ffbd59.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/cdfbd732-06bf-4aaa-9d7d-cacc02ffbd59/storage_v2/_src_/schema/salon_frumusete.0nDXzA.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/cdfbd732-06bf-4aaa-9d7d-cacc02ffbd59/storage_v2/_src_/schema/salon_frumusete.0nDXzA.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/factory/ServiceFactoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/factory/ServiceFactoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/controller/AppointmentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/controller/AppointmentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/controller/ClientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/controller/ClientController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/controller/DummyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/salon_frumusete/controller/DummyController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/controller/EmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/controller/EmployeeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/controller/EmployeeServiceController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/controller/LoyaltyCardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/controller/LoyaltyCardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/controller/ReceiptController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/controller/ReceiptController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/controller/ServiceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/controller/ServiceController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/databasemodell/Appointment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/databasemodell/Appointment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/databasemodell/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/databasemodell/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/databasemodell/EmployeeService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/databasemodell/LoyaltyCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/databasemodell/LoyaltyCard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/databasemodell/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/databasemodell/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/databasemodell/ProductReceipt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/databasemodell/ProductReceipt.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/databasemodell/Receipt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/databasemodell/Receipt.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/databasemodell/Service.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/databasemodell/Service.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/extra/dataloadeer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/extra/dataloadeer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/repository/ClientRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/repository/ClientRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/repository/ConnTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/repository/EmployeeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/repository/EmployeeRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/repository/LoyaltyCardRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/repository/LoyaltyCardRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/repository/ReceiptRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/repository/ReceiptRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/repository/SqlServer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/strategy/PremiumServiceOperation.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/strategy/ServiceOperationContext.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/strategy/ServiceOperationStrategy.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/strategy/StandardServiceOperation.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/salon_frumusete/ui/SalonCLICommands.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +63,20 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "raluca1704"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="5cf65d07-da2f-4e19-ac4f-57a468d21081" />
+        <option name="url" value="https://github.com/raluca1704/lab2SALON.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2
@@ -44,6 +98,7 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_directory_selection&quot;: &quot;C:/Users/raluc/IdeaProjects/lab2SALON_FRUMUSETE/src/test/java&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/raluc/IdeaProjects/lab2SALON_FRUMUSETE&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -63,49 +118,17 @@
   }
 }</component>
   <component name="RunManager">
-    <configuration name="ConnTest.testDatabaseConnection" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CARDTEST.testAddLoyaltyCard" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="MAP-Labor-2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.salon_frumusete.repository.*" />
+          <option name="PATTERN" value="org.salon_frumusete.databasemodell.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="org.salon_frumusete.repository" />
-      <option name="MAIN_CLASS_NAME" value="org.salon_frumusete.repository.ConnTest" />
-      <option name="METHOD_NAME" value="testDatabaseConnection" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ConnTest.testDeleteClient" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="MAP-Labor-2" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.salon_frumusete.repository.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.salon_frumusete.repository" />
-      <option name="MAIN_CLASS_NAME" value="org.salon_frumusete.repository.ConnTest" />
-      <option name="METHOD_NAME" value="testDeleteClient" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ConnTest.testUpdateClient" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="MAP-Labor-2" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.salon_frumusete.repository.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.salon_frumusete.repository" />
-      <option name="MAIN_CLASS_NAME" value="org.salon_frumusete.repository.ConnTest" />
-      <option name="METHOD_NAME" value="testUpdateClient" />
+      <option name="PACKAGE_NAME" value="org.salon_frumusete.databasemodell" />
+      <option name="MAIN_CLASS_NAME" value="org.salon_frumusete.databasemodell.CARDTEST" />
+      <option name="METHOD_NAME" value="testAddLoyaltyCard" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -127,17 +150,49 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ConnTest.testclient" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="DummyController.shouldReturn" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="MAP-Labor-2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.salon_frumusete.repository.*" />
+          <option name="PATTERN" value="org.salon_frumusete.controller.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="org.salon_frumusete.repository" />
-      <option name="MAIN_CLASS_NAME" value="org.salon_frumusete.repository.ConnTest" />
-      <option name="METHOD_NAME" value="testclient" />
+      <option name="PACKAGE_NAME" value="org.salon_frumusete.controller" />
+      <option name="MAIN_CLASS_NAME" value="org.salon_frumusete.controller.DummyController" />
+      <option name="METHOD_NAME" value="shouldReturn" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DummyController.shouldReturnDefaultMessage" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="MAP-Labor-2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.salon_frumusete.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.salon_frumusete.controller" />
+      <option name="MAIN_CLASS_NAME" value="org.salon_frumusete.controller.DummyController" />
+      <option name="METHOD_NAME" value="shouldReturnDefaultMessage" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DummyController.testsomething" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="MAP-Labor-2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.salon_frumusete.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.salon_frumusete.controller" />
+      <option name="MAIN_CLASS_NAME" value="org.salon_frumusete.controller.DummyController" />
+      <option name="METHOD_NAME" value="testsomething" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -165,11 +220,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.DummyController.shouldReturn" />
+        <item itemvalue="JUnit.DummyController.shouldReturnDefaultMessage" />
+        <item itemvalue="JUnit.CARDTEST.testAddLoyaltyCard" />
+        <item itemvalue="JUnit.DummyController.testsomething" />
         <item itemvalue="JUnit.ConnTest.testaddclient" />
-        <item itemvalue="JUnit.ConnTest.testUpdateClient" />
-        <item itemvalue="JUnit.ConnTest.testDeleteClient" />
-        <item itemvalue="JUnit.ConnTest.testclient" />
-        <item itemvalue="JUnit.ConnTest.testDatabaseConnection" />
       </list>
     </recent_temporary>
   </component>
@@ -188,7 +243,8 @@
       <workItem from="1702407945286" duration="9165000" />
       <workItem from="1702448883973" duration="6671000" />
       <workItem from="1702898931925" duration="974000" />
-      <workItem from="1702900800869" duration="16706000" />
+      <workItem from="1702900800869" duration="37054000" />
+      <workItem from="1704782249196" duration="18964000" />
     </task>
     <task id="LOCAL-00001" summary="final cu mysql">
       <option name="closed" value="true" />
@@ -262,7 +318,15 @@
       <option name="project" value="LOCAL" />
       <updated>1703054854344</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="test builder, factory">
+      <option name="closed" value="true" />
+      <created>1703055571664</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1703055571664</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

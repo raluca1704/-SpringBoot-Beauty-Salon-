@@ -14,9 +14,13 @@ import java.time.LocalDateTime;
 import java.time.LocalTime;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.ComponentScan;
 
 
 @SpringBootApplication
+//@ComponentScan(basePackages = "org.salon_frumusete.decorator")
+@ComponentScan(basePackages = {"org.salon_frumusete.repository","org.salon_frumusete.controller"})
+
 public class Main {
     public static void main(String[] args) {
         SpringApplication.run(Main.class, args);

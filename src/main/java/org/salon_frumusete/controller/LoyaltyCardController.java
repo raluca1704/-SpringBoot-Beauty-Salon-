@@ -3,6 +3,8 @@ package org.salon_frumusete.controller;
 //import org.salon_frumusete.databasemodell.AnniversaryGiftDecorator;
 import org.salon_frumusete.databasemodell.LoyaltyCard;
 //import org.salon_frumusete.databasemodell.LoyaltyCardDecorator;
+import org.salon_frumusete.databasemodell.LoyltyCardINTERFACE;
+import org.salon_frumusete.databasemodell.VIPDiscountDecorator;
 import org.salon_frumusete.repository.LoyaltyCardRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -19,18 +21,13 @@ public class LoyaltyCardController {
 
 
     @PostMapping
-    public ResponseEntity<LoyaltyCard> addLoyaltyCard(@RequestBody LoyaltyCard loyaltyCard) {
-        // Salvati loyaltyCard in repository
-        LoyaltyCard savedLoyaltyCard = loyaltyCardRepository.save(loyaltyCard);
+    public ResponseEntity<LoyaltyCard> addLoyaltyCard(@RequestBody LoyltyCardINTERFACE loyaltyCard) {
+        LoyltyCardINTERFACE vipDiscountCard = new VIPDiscountDecorator(loyaltyCard, 0.1f); // Adjust the VIP discount as needed
 
-//        // Decorati loyaltyCard cu AnniversaryGiftDecorator
-//        LoyaltyCardDecorator anniversaryGiftCard = new AnniversaryGiftDecorator(savedLoyaltyCard);
-//
-//        // Salvati loyaltyCard decorat in repository
-//        LoyaltyCard savedAnniversaryGiftCard = loyaltyCardRepository.save(anniversaryGiftCard);
-//
-//        // Returnati loyaltyCard decorat
-        return ResponseEntity.ok(savedLoyaltyCard);
+
+        LoyltyCardINTERFACE savedVipDiscountCard = loyaltyCardRepository.save((LoyaltyCard)vipDiscountCard);
+
+        return ResponseEntity.ok((LoyaltyCard) savedVipDiscountCard);
     }
 
     @GetMapping("/{loyaltyCardId}")

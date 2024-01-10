@@ -6,11 +6,13 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "loyalty_card")
-public class LoyaltyCard {
+public class LoyaltyCard               implements LoyltyCardINTERFACE{
     @Id
     private int loyaltyCardID;
     private int clientID;
     private float discount;
+
+
 
     public int getClientID() {
         return clientID;
