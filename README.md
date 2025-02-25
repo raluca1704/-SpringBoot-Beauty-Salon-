@@ -1,4 +1,4 @@
-Beauty Salon Management
+# Beauty Salon Management
 This Java console application efficiently manages beauty salon operations, 
 including appointment scheduling, customer management, staff assignments, and inventory tracking. 
 
